@@ -1,7 +1,7 @@
 export default function manifest() {
   return {
-    name: 'EFY Studio — Boutique Pilates',
-    short_name: 'EFY Studio',
+    name: 'EFY Studios — Boutique Pilates',
+    short_name: 'EFY Studios',
     description: 'Premium Pilates Studio in Berlin Lichterfelde West.',
     start_url: '/',
     scope: '/',

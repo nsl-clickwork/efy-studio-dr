@@ -143,7 +143,7 @@ export default function HomePage() {
           <ScrollReveal direction="right" delay={0.2} className={styles.philosophyImage}>
               <Image
                 src="/images/philosophy.png"
-                alt="Zwei Frauen beim Mat Pilates im EFY Studio"
+                alt="Zwei Frauen beim Mat Pilates im EFY Studios"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 style={{ objectFit: 'cover', filter: 'brightness(1.05) contrast(1.01)' }}
@@ -220,7 +220,7 @@ export default function HomePage() {
       <section className={`${styles.editorial} ${styles['editorial--reverse']}`} id="editorial-barre" data-navbar-theme="cream">
         <ScrollReveal direction="right" threshold={0.2} className={styles.editorialImage}>
           <video
-            src="/videos/h264-2.mp4"
+            src="/videos/h264-3-web.mp4"
             autoPlay
             loop
             muted
@@ -244,7 +244,7 @@ export default function HomePage() {
       <section className={styles.editorial} id="editorial-mat" data-navbar-theme="sand">
         <ScrollReveal direction="left" className={styles.editorialImage}>
           <video
-            src="/videos/h264-3-web.mp4"
+            src="/videos/h264-2-web.mp4"
             autoPlay
             loop
             muted
@@ -321,7 +321,7 @@ export default function HomePage() {
         <ScrollReveal direction="right" className={styles.coffeeImage}>
           <Image
             src="/images/cafe-daytime.png"
-            alt="EFY Studio Café — Mediterranean Outdoor Space"
+            alt="EFY Studios Café — Mediterranean Outdoor Space"
             fill
             unoptimized
             style={{ objectFit: 'cover', objectPosition: 'top', display: 'block' }}
@@ -422,7 +422,7 @@ export default function HomePage() {
               <h2>{tr.location.title}</h2>
               <p>{tr.location.p}</p>
               <address>
-                <strong>EFY Studio</strong><br />
+                <strong>EFY Studios</strong><br />
                 {studioInfo.address.street}<br />
                 {studioInfo.address.city}
               </address>
@@ -438,7 +438,7 @@ export default function HomePage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="EFY Studio Standort"
+                title="EFY Studios Standort"
               />
           </ScrollReveal>
           </div>

@@ -56,12 +56,11 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Non-blending Layer: Logo Image only */}
-      <div className={`${styles.navbarLogoLayer} ${navTheme === 'light' || menuOpen ? styles['logoLayer--light'] : ''}`}>
+      <nav className={navClass} id="main-nav">
         <div className={styles.navbarInner}>
           <Link 
             href="/" 
-            className={styles.logoIconLink} 
+            className={styles.logoLink} 
             onClick={(e) => {
               if (window.location.pathname === '/') {
                 e.preventDefault();
@@ -72,35 +71,13 @@ export default function Navbar() {
           >
             <Image
               src="/images/logo.svg"
-              alt="EFY Studio Logo"
-              width={64}
-              height={64}
+              alt="EFY Studios Logo"
+              width={74}
+              height={74}
               className={styles.logoSvg}
               priority
             />
           </Link>
-        </div>
-      </div>
-
-      {/* Blending Layer: Text, Links, and Buttons */}
-      <nav className={navClass} id="main-nav">
-        <div className={styles.navbarInner}>
-          <div className={styles.logoTextWrapper}>
-            <div className={styles.logoIconPlaceholder} />
-            <Link 
-              href="/" 
-              className={styles.logoTextLink}
-              onClick={(e) => {
-                if (window.location.pathname === '/') {
-                  e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }
-                setMenuOpen(false);
-              }}
-            >
-              <span className={styles.logoText}>EFY STUDIOS</span>
-            </Link>
-          </div>
 
           <div className={styles.navLinks}>
             {navigation.map((item) => (

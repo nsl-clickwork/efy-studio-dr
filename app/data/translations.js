@@ -38,7 +38,7 @@ export const t = {
       philosophy: {
         kicker: 'Unsere Philosophie',
         title: 'Bewegung mit Bedeutung',
-        p1: 'EFY Studio ist mehr als ein Pilates-Studio. Es ist ein Ort, an dem Stärke, Haltung und Wohlbefinden in einer ruhigen, persönlichen Atmosphäre zusammenfinden.',
+        p1: 'EFY Studios ist mehr als ein Pilates-Studio. Es ist ein Ort, an dem Stärke, Haltung und Wohlbefinden in einer ruhigen, persönlichen Atmosphäre zusammenfinden.',
         p2: 'Kleine Gruppen, erfahrene Trainer und ein Raum, der zum Loslassen einlädt — für Frauen, die mehr wollen als nur Training.',
         link: 'Mehr über uns',
       },
@@ -106,25 +106,25 @@ export const t = {
       },
       finalCta: {
         title: 'Deine erste Stunde.',
-        p: 'Starte jetzt deine Pilates-Reise bei EFY Studio.',
+        p: 'Starte jetzt deine Pilates-Reise bei EFY Studios.',
         btn: 'Probestunde buchen',
       },
     },
 
     kurse: {
-      kicker: 'EFY Studio',
+      kicker: 'EFY Studios',
       title: 'Unsere Kurse',
       sub: 'Finde das Training, das zu dir passt.',
       learnMore: 'Mehr erfahren',
       cta: {
         title: 'Bereit für deine erste Stunde?',
-        p: 'Buche jetzt deine Probestunde und erlebe EFY Studio.',
+        p: 'Buche jetzt deine Probestunde und erlebe EFY Studios.',
         btn: 'Jetzt buchen',
       },
     },
 
     cafe: {
-      kicker: 'EFY Studio',
+      kicker: 'EFY Studios',
       title: 'Das Café',
       introTitle: 'Mehr als nur Pilates.',
       introText: 'Unser kleines Café ist der perfekte Ort, um vor oder nach der Stunde zur Ruhe zu kommen. Tausche dich mit anderen aus, genieße einen frisch gebrühten Kaffee oder entspanne mit einem Buch.',
@@ -137,7 +137,7 @@ export const t = {
       title: 'Über uns',
       visionKicker: 'Unsere Vision',
       visionTitle: 'Ein Raum für dich.',
-      p1: 'EFY Studio wurde aus der Überzeugung heraus gegründet, dass effektives Training und eine stilvolle, beruhigende Atmosphäre kein Widerspruch sein müssen. Wir wollten einen Ort schaffen, an dem man nicht nur seinen Körper stärkt, sondern auch zur Ruhe kommt.',
+      p1: 'EFY Studios wurde aus der Überzeugung heraus gegründet, dass effektives Training und eine stilvolle, beruhigende Atmosphäre kein Widerspruch sein müssen. Wir wollten einen Ort schaffen, an dem man nicht nur seinen Körper stärkt, sondern auch zur Ruhe kommt.',
       p2: 'In unserem Boutique Studio in Lichterfelde West trainieren wir bewusst in kleinen Gruppen. Das ermöglicht es unseren erfahrenen Trainerinnen, individuell auf deine Bedürfnisse einzugehen und sicherzustellen, dass du jede Übung präzise und wirkungsvoll ausführst.',
       teamKicker: 'Das Team',
       teamTitle: 'Wer wir sind',
@@ -149,7 +149,7 @@ export const t = {
     },
 
     stundenplan: {
-      kicker: 'EFY Studio',
+      kicker: 'EFY Studios',
       title: 'Stundenplan',
       sub: 'Finde deine Klasse und buche direkt online über Eversports.',
       widgetTitle: 'Online Buchung',
@@ -241,7 +241,7 @@ export const t = {
       philosophy: {
         kicker: 'Our Philosophy',
         title: 'Movement with Meaning',
-        p1: 'EFY Studio is more than a Pilates studio. It is a place where strength, posture and wellbeing come together in a calm, personal atmosphere.',
+        p1: 'EFY Studios is more than a Pilates studio. It is a place where strength, posture and wellbeing come together in a calm, personal atmosphere.',
         p2: 'Small groups, experienced instructors and a space that invites you to let go — for women who want more than just a workout.',
         link: 'More about us',
       },
@@ -309,25 +309,25 @@ export const t = {
       },
       finalCta: {
         title: 'Your first class.',
-        p: 'Start your Pilates journey at EFY Studio today.',
+        p: 'Start your Pilates journey at EFY Studios today.',
         btn: 'Book a trial class',
       },
     },
 
     kurse: {
-      kicker: 'EFY Studio',
+      kicker: 'EFY Studios',
       title: 'Our Classes',
       sub: 'Find the training that suits you.',
       learnMore: 'Learn more',
       cta: {
         title: 'Ready for your first class?',
-        p: 'Book your trial class now and experience EFY Studio.',
+        p: 'Book your trial class now and experience EFY Studios.',
         btn: 'Book now',
       },
     },
 
     cafe: {
-      kicker: 'EFY Studio',
+      kicker: 'EFY Studios',
       title: 'The Café',
       introTitle: 'More than just Pilates.',
       introText: 'Our little café is the perfect place to wind down before or after your session. Connect with others, enjoy a freshly brewed coffee or relax with a book.',
@@ -340,7 +340,7 @@ export const t = {
       title: 'About us',
       visionKicker: 'Our Vision',
       visionTitle: 'A space for you.',
-      p1: 'EFY Studio was founded on the belief that effective training and a stylish, calming atmosphere are not mutually exclusive. We wanted to create a place where you not only strengthen your body, but also find peace of mind.',
+      p1: 'EFY Studios was founded on the belief that effective training and a stylish, calming atmosphere are not mutually exclusive. We wanted to create a place where you not only strengthen your body, but also find peace of mind.',
       p2: 'In our boutique studio in Lichterfelde West, we deliberately train in small groups. This allows our experienced instructors to attend to your individual needs and ensure that you perform every exercise precisely and effectively.',
       teamKicker: 'The Team',
       teamTitle: 'Who we are',
@@ -352,7 +352,7 @@ export const t = {
     },
 
     stundenplan: {
-      kicker: 'EFY Studio',
+      kicker: 'EFY Studios',
       title: 'Schedule',
       sub: 'Find your class and book directly online via Eversports.',
       widgetTitle: 'Online booking',

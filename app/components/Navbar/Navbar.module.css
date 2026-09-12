@@ -4,55 +4,26 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  min-height: calc(var(--nav-height) + env(safe-area-inset-top));
-  padding-top: env(safe-area-inset-top);
+  min-height: var(--nav-height);
+  padding-top: max(20px, env(safe-area-inset-top));
+  padding-bottom: 16px;
+  padding-left: max(var(--space-md), env(safe-area-inset-left));
+  padding-right: max(var(--space-md), env(safe-area-inset-right));
   display: flex;
   align-items: center;
   transition: all var(--transition-medium);
-  padding-left: max(var(--space-md), env(safe-area-inset-left));
-  padding-right: max(var(--space-md), env(safe-area-inset-right));
   mix-blend-mode: difference;
   pointer-events: none;
 }
 
-.navbarLogoLayer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  min-height: calc(var(--nav-height) + env(safe-area-inset-top));
-  padding-top: env(safe-area-inset-top);
-  display: flex;
-  align-items: center;
-  transition: all var(--transition-medium);
-  padding-left: max(var(--space-md), env(safe-area-inset-left));
-  padding-right: max(var(--space-md), env(safe-area-inset-right));
-  pointer-events: none;
-}
-
-.logoIconLink {
+.logoLink {
   pointer-events: auto;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
   z-index: 1001;
-}
-
-.logoTextWrapper {
-  display: flex;
-  align-items: center;
-  z-index: 1001;
-}
-
-.logoIconPlaceholder {
-  width: 76px; /* 64px logo + 12px gap */
-  flex-shrink: 0;
-}
-
-.logoTextLink {
-  pointer-events: auto;
-  display: flex;
-  align-items: center;
+  text-decoration: none;
+  margin-left: 5rem;
 }
 
 .navbar--transparent {
@@ -62,8 +33,6 @@
 .navbar--solid {
   background: transparent;
 }
-
-
 
 .navbarInner {
   position: relative;
@@ -77,26 +46,18 @@
 }
 
 /* Logo */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  z-index: 1001;
-}
-
 .logoSvg {
-  height: 64px;
+  height: 74px;
   width: auto;
-  border-radius: 8px;
-  transition: filter var(--transition-medium);
-  /* Make the black SVG cream colored for dark background */
-  filter: invert(92%) sepia(10%) saturate(301%) hue-rotate(345deg) brightness(96%) contrast(92%);
+  display: block;
+  /* Invert black SVG to white so mix-blend-mode: difference automatically inverts it across dark and light backgrounds */
+  filter: invert(1);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
-.logoLayer--light .logoSvg {
-  /* Return to original black SVG for light background */
-  /* We use opacity or slightly lighter to match text */
-  filter: opacity(0.8);
+.logoLink:hover .logoSvg {
+  opacity: 0.85;
+  transform: scale(1.03);
 }
 
 
@@ -364,14 +325,14 @@
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding-top: max(14px, env(safe-area-inset-top));
+    padding-bottom: 10px;
+  }
   .logoSvg {
-    height: 46px;
+    height: 52px;
   }
-  .logoIconPlaceholder {
-    width: 58px; /* 46px logo + 12px gap */
-  }
-  .navbar, .navbarLogoLayer {
-    padding-top: max(16px, env(safe-area-inset-top));
-    padding-bottom: 8px;
+  .logoLink {
+    margin-left: 0;
   }
 }

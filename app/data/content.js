@@ -8,7 +8,7 @@ export const classes = [
       title: 'Reformer Pilates',
       subtitle: 'Das Herzstück unseres Studios',
       shortDesc: 'Ganzkörpertraining auf dem Reformer — für Kraft, Haltung und Flexibilität.',
-      longDesc: 'Reformer Pilates ist das Herzstück von EFY Studio. Mit dem Reformer trainierst du Kraft, Flexibilität und Haltung in einer fließenden, kontrollierten Bewegung. Die federbetriebene Plattform bietet variablen Widerstand für ein effektives Ganzkörpertraining — angepasst an dein Level.',
+      longDesc: 'Reformer Pilates ist das Herzstück von EFY Studios. Mit dem Reformer trainierst du Kraft, Flexibilität und Haltung in einer fließenden, kontrollierten Bewegung. Die federbetriebene Plattform bietet variablen Widerstand für ein effektives Ganzkörpertraining — angepasst an dein Level.',
       benefits: [
         'Ganzkörperkraft aufbauen',
         'Haltung verbessern',
@@ -23,7 +23,7 @@ export const classes = [
       title: 'Reformer Pilates',
       subtitle: 'The Heart of Our Studio',
       shortDesc: 'Full-body training on the Reformer — for strength, posture and flexibility.',
-      longDesc: 'Reformer Pilates is the heart of EFY Studio. With the Reformer, you train strength, flexibility and posture in a flowing, controlled movement. The spring-powered platform offers variable resistance for an effective full-body workout — adapted to your level.',
+      longDesc: 'Reformer Pilates is the heart of EFY Studios. With the Reformer, you train strength, flexibility and posture in a flowing, controlled movement. The spring-powered platform offers variable resistance for an effective full-body workout — adapted to your level.',
       benefits: [
         'Build full-body strength',
         'Improve posture',
@@ -38,7 +38,7 @@ export const classes = [
   {
     slug: 'barre',
     image: '/images/reformer.webp',
-    video: '/videos/h264-2.mp4',
+    video: '/videos/h264-3-web.mp4',
     duration: '50 Min.',
     de: {
       title: 'Barre Pilates',
@@ -74,6 +74,7 @@ export const classes = [
   {
     slug: 'mat',
     image: '/images/mat.webp',
+    video: '/videos/h264-2-web.mp4',
     duration: '50 Min.',
     de: {
       title: 'Mat Pilates',
@@ -190,7 +191,7 @@ export const navigation = [
 
 export const testimonials = [
   {
-    quote: 'EFY Studio hat mein Körpergefühl komplett verändert. Die Atmosphäre ist ruhig, die Trainer aufmerksam — ich fühle mich nach jeder Stunde stärker.',
+    quote: 'EFY Studios hat mein Körpergefühl komplett verändert. Die Atmosphäre ist ruhig, die Trainer aufmerksam — ich fühle mich nach jeder Stunde stärker.',
     author: 'Maria K.',
     location: 'Lichterfelde West',
   },
@@ -214,7 +215,7 @@ export const cafeMenu = [
 ];
 
 export const studioInfo = {
-  name: 'EFY Studio',
+  name: 'EFY Studios',
   tagline: 'Boutique Pilates in Lichterfelde West',
   address: {
     street: 'Curtiusstraße 9',
