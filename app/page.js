@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import ScrollReveal from './components/ScrollReveal';
-import { classes, testimonials, cafeMenu, studioInfo } from './data/content';
+import { classes, targetGroups, pricingCategories, testimonials, studioInfo } from './data/content';
 import { useLanguage } from './context/LanguageContext';
 import { t } from './data/translations';
 
@@ -47,15 +47,18 @@ export default function HomePage() {
     { label: 'Reformer', href: '/kurse/reformer' },
     { label: 'Barre', href: '/kurse/barre' },
     { label: 'Mat', href: '/kurse/mat' },
-    { label: 'Pre & Postnatal', href: '/kurse/prenatal' },
-    { label: 'Move & Grow', href: '/kurse/move-grow' },
-    { label: 'Studio Café', href: '/cafe' },
+    { label: 'Women only', href: '#gruppen' },
+    { label: 'Men only', href: '#gruppen' },
+    { label: '50+', href: '#gruppen' },
+    { label: 'Pre- & Postnatal', href: '#gruppen' },
+    { label: 'Move & Grow', href: '#gruppen' },
+    { label: 'Preise', href: '/preise' },
     { label: 'Curtiusstraße 9', href: '/kontakt' },
   ];
   const marqueeItems = [...stripItems, ...stripItems, ...stripItems];
 
   const galleryImages = [
-    { type: 'video', src: '/videos/h264-3-web.mp4' },
+    { type: 'video', src: '/videos/barre.mp4' },
     { src: '/images/ball.webp', alt: 'Pilates Reformer close-up' },
     { src: '/images/prenatal.webp', alt: 'Pre & Postnatal Pilates' },
     { src: '/images/barre.webp', alt: 'Barre Training' },
@@ -220,12 +223,12 @@ export default function HomePage() {
       <section className={`${styles.editorial} ${styles['editorial--reverse']}`} id="editorial-barre" data-navbar-theme="cream">
         <ScrollReveal direction="right" threshold={0.2} className={styles.editorialImage}>
           <video
-            src="/videos/h264-3-web.mp4"
+            src="/videos/barre.mp4"
             autoPlay
             loop
             muted
             playsInline
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.02)' }}
           />
         </ScrollReveal>
         <div className={`${styles.editorialContent} ${styles['editorialContent--cream']}`}>
@@ -266,80 +269,111 @@ export default function HomePage() {
 
 
 
-      {/* ═══════════ SECTION 8: PRENATAL ═══════════ */}
-      <section className={styles.prenatal} id="prenatal" data-navbar-theme="light">
-        <div className={styles.prenatalContent}>
-          <ScrollReveal direction="left">
-            <span className="kicker">{tr.prenatal.kicker}</span>
-            <h2>{tr.prenatal.title}</h2>
-            <p>{tr.prenatal.p}</p>
-            <Link href="/kurse/prenatal" className="btn btn--outline-dark" id="prenatal-link-btn">
-              {tr.prenatal.btn}
-            </Link>
-          </ScrollReveal>
-        </div>
-        <ScrollReveal direction="right" className={styles.prenatalImage}>
-          <Image
-            src="/images/prenatal.webp"
-            alt="Schwangere Frau beim Pilates Training auf dem Reformer"
-            fill
-            quality={100}
-            sizes="50vw"
-            style={{ objectFit: 'cover', objectPosition: 'center top' }}
-          />
-        </ScrollReveal>
-      </section>
-
-      {/* ═══════════ SECTION 9: MOVE & GROW ═══════════ */}
-      <section className={`${styles.moveGrow} ${styles['moveGrow--reverse']}`} id="move-grow" data-navbar-theme="dark">
-        <div className={styles.moveGrowWatermark}>M&G</div>
-        <div className={styles.moveGrowContent}>
-          <ScrollReveal direction="right">
-            <span className="kicker" style={{ color: 'var(--sand)' }}>{tr.moveGrow.kicker}</span>
-            <h2>{tr.moveGrow.title}</h2>
-            <p className={styles.moveGrowSub}>{tr.moveGrow.sub}</p>
-            <p>{tr.moveGrow.p}</p>
-            <Link href="/kurse/move-grow" className="btn btn--outline" id="movegrow-link-btn">
-              {tr.moveGrow.btn}
-            </Link>
-          </ScrollReveal>
-        </div>
-        <ScrollReveal direction="left" className={styles.moveGrowImage}>
-          <Image
-            src="/images/hero-v2.png"
-            alt="Move & Grow Pilates for Kids"
-            fill
-            quality={90}
-            sizes="50vw"
-            style={{ objectFit: 'cover', objectPosition: 'center top' }}
-          />
-        </ScrollReveal>
-      </section>
-
-      {/* ═══════════ SECTION 10: COFFEE ═══════════ */}
-      <section className={`${styles.coffee} ${styles['coffee--reverse']}`} id="studio-cafe" data-navbar-theme="light">
-        <ScrollReveal direction="right" className={styles.coffeeImage}>
-          <Image
-            src="/images/cafe-daytime.png"
-            alt="EFY Studios Café — Mediterranean Outdoor Space"
-            fill
-            unoptimized
-            style={{ objectFit: 'cover', objectPosition: 'top', display: 'block' }}
-          />
-        </ScrollReveal>
-        <div className={styles.coffeeContent}>
-          <ScrollReveal direction="left">
-            <span className="kicker">{tr.coffee.kicker}</span>
-            <h2>{tr.coffee.title}</h2>
-            <p>{tr.coffee.p}</p>
-            <div className={styles.coffeeMenu}>
-              {cafeMenu.map((item) => (
-                <div key={item.name} className={styles.coffeeMenuItem}>
-                  {item.name}
-                </div>
-              ))}
+      {/* ═══════════ SECTION 8: TARGET GROUPS (UNIFIED) ═══════════ */}
+      <section className={styles.targetGroupsSection} id="gruppen" data-navbar-theme="cream">
+        <div className={styles.targetGroupsInner}>
+          <ScrollReveal>
+            <div className={styles.targetGroupsHeader}>
+              <span className="kicker">{tr.gruppen.kicker}</span>
+              <h2>{tr.gruppen.title}</h2>
+              <p>{tr.gruppen.sub}</p>
             </div>
-            <Link href="/cafe" className="link-arrow">{tr.coffee.link}</Link>
+          </ScrollReveal>
+
+          <div className={styles.targetGroupsGrid}>
+            {targetGroups.map((group, idx) => (
+              <ScrollReveal key={group.id} delay={idx * 0.1}>
+                <div className={styles.targetGroupCard} id={`group-card-${group.id}`}>
+                  <div className={styles.targetGroupCardImage}>
+                    <Image
+                      src={group.image}
+                      alt={group[lang].title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      style={{ 
+                        objectFit: 'cover',
+                        objectPosition: group.objectPosition || 'center center',
+                      }}
+                    />
+                    <div className={styles.targetGroupCardBadge}>
+                      {group[lang].badge}
+                    </div>
+                  </div>
+                  <div className={styles.targetGroupCardBody}>
+                    <h3>{group[lang].title}</h3>
+                    <p className={styles.targetGroupCardSub}>{group[lang].subtitle}</p>
+                    <p className={styles.targetGroupCardDesc}>{group[lang].desc}</p>
+                    
+                    <ul className={styles.targetGroupHighlights}>
+                      {group[lang].highlights.map((item, hIdx) => (
+                        <li key={hIdx}>{item}</li>
+                      ))}
+                    </ul>
+
+                    <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '0.65rem', paddingTop: '0.5rem' }}>
+                      <a
+                        href={studioInfo.bookingUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn--outline-dark"
+                        style={{ width: '100%', textAlign: 'center', fontSize: '0.75rem', padding: '0.6rem 0.5rem' }}
+                      >
+                        {tr.gruppen.cta}
+                      </a>
+                      <Link
+                        href="/kontakt"
+                        className="link-arrow"
+                        style={{ alignSelf: 'center', fontSize: '0.8rem' }}
+                      >
+                        {tr.gruppen.more}
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════ SECTION 9: PRICING PREVIEW ═══════════ */}
+      <section className={styles.pricingPreviewSection} id="preise-preview" data-navbar-theme="dark">
+        <div className={styles.pricingPreviewInner}>
+          <ScrollReveal>
+            <div className={styles.pricingPreviewHeader}>
+              <span className="kicker">{tr.preisePreview.kicker}</span>
+              <h2>{tr.preisePreview.title}</h2>
+              <p>{tr.preisePreview.sub}</p>
+            </div>
+          </ScrollReveal>
+
+          <div className={styles.pricingPreviewGrid}>
+            {pricingCategories.slice(0, 4).map((cat, cIdx) => {
+              const popularCard = cat.cards.find(c => c.highlight) || cat.cards[0];
+              return (
+                <ScrollReveal key={cat.id} delay={cIdx * 0.1}>
+                  <div className={styles.pricingPreviewCard} id={`pricing-preview-${cat.id}`}>
+                    <span className={styles.pricingPreviewBadge}>{popularCard.badge}</span>
+                    <h3 className={styles.pricingPreviewTitle}>{cat[lang].name}</h3>
+                    <div className={styles.pricingPreviewPrice}>{popularCard.price}</div>
+                    <p className={styles.pricingPreviewDesc}>
+                      {popularCard.classes} — {lang === 'de' ? popularCard.descDe : popularCard.descEn}
+                    </p>
+                    <Link href="/preise" className="btn btn--outline" style={{ width: '100%', textAlign: 'center' }}>
+                      {lang === 'de' ? 'Details & Buchen' : 'Details & Book'}
+                    </Link>
+                  </div>
+                </ScrollReveal>
+              );
+            })}
+          </div>
+
+          <ScrollReveal>
+            <div className={styles.pricingPreviewCtaRow}>
+              <Link href="/preise" className="btn btn--primary" id="home-view-all-prices-btn">
+                {tr.preisePreview.btn}
+              </Link>
+            </div>
           </ScrollReveal>
         </div>
       </section>

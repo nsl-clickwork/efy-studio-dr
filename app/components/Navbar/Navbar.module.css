@@ -23,7 +23,7 @@
   justify-content: center;
   z-index: 1001;
   text-decoration: none;
-  margin-left: 5rem;
+  margin-left: 0;
 }
 
 .navbar--transparent {
@@ -45,9 +45,16 @@
   margin: 0 auto;
 }
 
+.navGroupLeft {
+  display: flex;
+  align-items: center;
+  gap: 3.25rem;
+  pointer-events: auto;
+}
+
 /* Logo */
 .logoSvg {
-  height: 74px;
+  height: 82px;
   width: auto;
   display: block;
   /* Invert black SVG to white so mix-blend-mode: difference automatically inverts it across dark and light backgrounds */
@@ -60,10 +67,6 @@
   transform: scale(1.03);
 }
 
-
-
-
-
 .logoText {
   color: var(--cream);
   font-weight: 300;
@@ -72,15 +75,11 @@
   transition: color 0.2s ease;
 }
 
-
-
-
-
 /* Navigation Links */
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 2.25rem;
   pointer-events: auto;
 }
 
@@ -88,11 +87,21 @@
   color: var(--cream);
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 0.8rem;
-  letter-spacing: 1.5px;
+  font-size: 0.95rem;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
   transition: color var(--transition-fast), opacity var(--transition-fast);
   position: relative;
+  opacity: 0.9;
+}
+
+.navLink:hover {
+  opacity: 1;
+}
+
+.navLink--active {
+  opacity: 1;
+  font-weight: 500;
 }
 
 .navLink::after {
@@ -106,21 +115,17 @@
   transition: width var(--transition-medium);
 }
 
-.navLink:hover::after {
+.navLink:hover::after,
+.navLink--active::after {
   width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+.navActionsRight {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  pointer-events: auto;
+}
 
 /* CTA Button */
 .navCta:hover {
@@ -129,8 +134,8 @@
 }
 .navCta {
   composes: btn from global;
-  font-size: 0.75rem;
-  padding: 0.7rem 1.5rem;
+  font-size: 0.8rem;
+  padding: 0.75rem 1.6rem;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   transition: all var(--transition-medium);
@@ -311,7 +316,8 @@
 }
 
 @media (max-width: 1024px) {
-  .navLinks {
+  .navLinks,
+  .navActionsRight {
     display: none;
   }
 

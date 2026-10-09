@@ -325,6 +325,8 @@
 .editorial {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
+  background-color: var(--cream);
 }
 
 .editorial--reverse {
@@ -339,12 +341,23 @@
   position: relative;
   overflow: hidden;
   min-height: 600px;
+  background-color: var(--cream);
 }
 
-.editorialImage img {
+.editorialImage img,
+.editorialImage video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.editorialImage video {
+  transform: scale(1.03);
+  transform-origin: center center;
+}
+
+.editorialImage img {
   object-position: center 30%;
   transition: transform var(--transition-slow);
 }
@@ -1240,3 +1253,273 @@
     letter-spacing: 1.5px;
   }
 }
+
+/* === TARGET GROUPS UNIFIED SECTION === */
+.targetGroupsSection {
+  padding: var(--space-2xl) var(--space-md);
+  background-color: var(--cream);
+  position: relative;
+}
+
+.targetGroupsInner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.targetGroupsHeader {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--space-xl);
+}
+
+.targetGroupsHeader h2 {
+  font-style: italic;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
+}
+
+.targetGroupsHeader p {
+  color: var(--taupe);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.targetGroupsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.15rem;
+}
+
+.targetGroupsGrid > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.targetGroupCard {
+  background-color: var(--warm-white);
+  border: 1px solid rgba(200, 185, 154, 0.35);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
+  box-shadow: 0 4px 20px rgba(30, 24, 18, 0.04);
+  height: 100%;
+}
+
+.targetGroupCard:hover {
+  transform: translateY(-6px);
+  border-color: var(--sand);
+  box-shadow: 0 16px 40px rgba(30, 24, 18, 0.08);
+}
+
+.targetGroupCardImage {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+}
+
+.targetGroupCardImage img {
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.targetGroupCard:hover .targetGroupCardImage img {
+  transform: scale(1.05);
+}
+
+.targetGroupCardBadge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: rgba(30, 24, 18, 0.75);
+  backdrop-filter: blur(8px);
+  color: var(--warm-white);
+  font-size: 0.65rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(200, 185, 154, 0.3);
+  z-index: 2;
+}
+
+.targetGroupCardBody {
+  padding: 1.4rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.targetGroupCardBody h3 {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-style: italic;
+  margin-bottom: 0.25rem;
+  color: var(--dark);
+  line-height: 1.2;
+}
+
+.targetGroupCardSub {
+  font-size: 0.75rem;
+  color: var(--brown);
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.targetGroupCardDesc {
+  font-size: 0.85rem;
+  color: var(--taupe);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.targetGroupHighlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.25rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(200, 185, 154, 0.25);
+}
+
+.targetGroupHighlights li {
+  font-size: 0.78rem;
+  color: var(--dark);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  line-height: 1.4;
+}
+
+.targetGroupHighlights li::before {
+  content: '·';
+  color: var(--sand);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+@media (max-width: 1199px) {
+  .targetGroupsGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.15rem;
+    padding-bottom: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .targetGroupsGrid > div {
+    flex: 0 0 280px;
+    scroll-snap-align: start;
+    height: auto;
+  }
+}
+
+/* === PRICING PREVIEW SECTION === */
+.pricingPreviewSection {
+  padding: var(--space-2xl) var(--space-md);
+  background: linear-gradient(180deg, var(--dark) 0%, #15110D 100%);
+  color: var(--warm-white);
+}
+
+.pricingPreviewInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.pricingPreviewHeader {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto var(--space-xl);
+}
+
+.pricingPreviewHeader .kicker {
+  color: var(--sand);
+}
+
+.pricingPreviewHeader .kicker::before {
+  background-color: var(--sand);
+}
+
+.pricingPreviewHeader h2 {
+  color: var(--warm-white);
+  font-style: italic;
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  margin-bottom: var(--space-sm);
+}
+
+.pricingPreviewHeader p {
+  color: rgba(253, 251, 247, 0.7);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.pricingPreviewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: var(--space-xl);
+}
+
+.pricingPreviewCard {
+  background: rgba(253, 251, 247, 0.035);
+  border: 1px solid rgba(200, 185, 154, 0.2);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-medium), border-color var(--transition-medium), background-color var(--transition-medium);
+}
+
+.pricingPreviewCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--sand);
+  background: rgba(253, 251, 247, 0.06);
+}
+
+.pricingPreviewBadge {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--sand);
+  margin-bottom: 0.5rem;
+}
+
+.pricingPreviewTitle {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-style: italic;
+  color: var(--warm-white);
+  margin-bottom: 0.75rem;
+}
+
+.pricingPreviewPrice {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--warm-white);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.pricingPreviewDesc {
+  font-size: 0.85rem;
+  color: rgba(253, 251, 247, 0.65);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.pricingPreviewCtaRow {
+  text-align: center;
+  margin-top: var(--space-lg);
+}
+

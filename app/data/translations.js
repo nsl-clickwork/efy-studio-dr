@@ -3,9 +3,9 @@ export const t = {
     nav: {
       home: 'Startseite',
       kurse: 'Kurse',
+      preise: 'Preise',
       stundenplan: 'Stundenplan',
       ueberUns: 'Über uns',
-      cafe: 'Café',
       kontakt: 'Kontakt',
       buchen: 'Jetzt buchen',
       menuOpen: 'Menü öffnen',
@@ -18,7 +18,7 @@ export const t = {
       colMehr: 'Mehr',
       ueberUns: 'Über uns',
       stundenplan: 'Stundenplan',
-      studioCafe: 'Studio Café',
+      preise: 'Preise',
       kontakt: 'Kontakt',
       impressum: 'Impressum',
       datenschutz: 'Datenschutz',
@@ -77,24 +77,19 @@ export const t = {
           { icon: '◒', title: 'Duo', desc: 'Zu zweit trainieren und motivieren.' },
         ],
       },
-      prenatal: {
-        kicker: 'Für werdende & junge Mütter',
-        title: 'Pre & Postnatal Pilates',
-        p: 'Sanftes, sicheres Training — angepasst an jede Phase der Schwangerschaft und Rückbildung. Stärke deinen Körper, finde deine Balance.',
-        btn: 'Mehr erfahren',
+      gruppen: {
+        kicker: 'Vielfalt & Fokus',
+        title: 'Kurse für jede Gruppe',
+        sub: 'Von Women only über gezielte Core-Arbeit für Männer bis hin zu 50+ Vitalität, Pre- & Postnatal und spielerischer Bewegung für Kinder — wir bieten spezialisierte Klassen für jede Lebensphase.',
+        tagTitle: 'Fokusgruppen im Überblick',
+        more: 'Details ansehen',
+        cta: 'Gruppe anfragen',
       },
-      moveGrow: {
-        kicker: 'Für die Kleinsten',
-        title: 'Move & Grow',
-        sub: 'Bewegung, Spaß und Entwicklung für Kinder',
-        p: 'Spielerisch, kreativ und altersgerecht — Move & Grow bringt Kinder in Bewegung und fördert Koordination, Gleichgewicht und Freude am eigenen Körper.',
-        btn: 'Mehr erfahren',
-      },
-      coffee: {
-        kicker: 'Nach dem Training',
-        title: 'Studio Café',
-        p: 'Entspanne nach deiner Stunde bei einem handgemachten Kaffee oder Matcha. Unser kleines Café ist der perfekte Ort, um zur Ruhe zu kommen.',
-        link: 'Mehr zum Café',
+      preisePreview: {
+        kicker: 'Investition in dich',
+        title: 'Preise & Pakete',
+        sub: 'Flexible Drop-In Einheiten, attraktive Gruppenpakete oder individuelles Solo- und Duotraining.',
+        btn: 'Alle Preise & Pakete ansehen',
       },
       gallery: {
         kicker: 'Einblicke',
@@ -116,6 +111,8 @@ export const t = {
       title: 'Unsere Kurse',
       sub: 'Finde das Training, das zu dir passt.',
       learnMore: 'Mehr erfahren',
+      groupsTitle: 'Kurse für alle Zielgruppen',
+      groupsSub: 'Spezifische Kursformate für Frauen, Männer, 50+, werdende Mütter und Kinder.',
       cta: {
         title: 'Bereit für deine erste Stunde?',
         p: 'Buche jetzt deine Probestunde und erlebe EFY Studios.',
@@ -123,13 +120,23 @@ export const t = {
       },
     },
 
-    cafe: {
+    preise: {
       kicker: 'EFY Studios',
-      title: 'Das Café',
-      introTitle: 'Mehr als nur Pilates.',
-      introText: 'Unser kleines Café ist der perfekte Ort, um vor oder nach der Stunde zur Ruhe zu kommen. Tausche dich mit anderen aus, genieße einen frisch gebrühten Kaffee oder entspanne mit einem Buch.',
-      menuKicker: 'Unser Angebot',
-      menuTitle: 'Menu',
+      title: 'Preise & Pakete',
+      sub: 'Transparent, flexibel und unkompliziert buchbar. Finde das perfekte Format für deine Ziele.',
+      tabsTitle: 'Wähle deine Kategorie',
+      popular: 'Beliebt',
+      includedTitle: 'In jeder Stunde inklusive',
+      includedItems: [
+        'Kleine, persönliche Gruppen für maximale Betreuung',
+        'Modernste Reformer & Studio-Equipment inklusive',
+        'Kostenlose Stornierung bis zu 24 Stunden vor Kursbeginn',
+        'Matten, Handtücher & Erfrischungen vor Ort vorhanden',
+      ],
+      infoTitle: 'Gut zu wissen',
+      infoText: 'Alle Karten und Buchungen werden bequem online über unser Buchungssystem Eversports verwaltet. Karten sind ab Kaufdatum flexibel einlösbar.',
+      contactCta: 'Individuelle Anfrage oder Fragen zu unseren Paketen?',
+      contactBtn: 'Kontaktiere uns',
     },
 
     about: {
@@ -206,9 +213,9 @@ export const t = {
     nav: {
       home: 'Home',
       kurse: 'Classes',
+      preise: 'Prices',
       stundenplan: 'Schedule',
       ueberUns: 'About us',
-      cafe: 'Café',
       kontakt: 'Contact',
       buchen: 'Book now',
       menuOpen: 'Open menu',
@@ -221,7 +228,7 @@ export const t = {
       colMehr: 'More',
       ueberUns: 'About us',
       stundenplan: 'Schedule',
-      studioCafe: 'Studio Café',
+      preise: 'Prices',
       kontakt: 'Contact',
       impressum: 'Legal notice',
       datenschutz: 'Privacy policy',
@@ -280,24 +287,19 @@ export const t = {
           { icon: '◒', title: 'Duo', desc: 'Train together and motivate each other.' },
         ],
       },
-      prenatal: {
-        kicker: 'For expecting & new mothers',
-        title: 'Pre & Postnatal Pilates',
-        p: 'Gentle, safe training — adapted to every stage of pregnancy and postnatal recovery. Strengthen your body, find your balance.',
-        btn: 'Learn more',
+      gruppen: {
+        kicker: 'Diversity & Focus',
+        title: 'Classes for Every Group',
+        sub: 'From women only sessions and athletic core training for men to 50+ joint vitality, mindful pre/postnatal care, and joyful movement for kids — we offer specialized formats for every life stage.',
+        tagTitle: 'Target Groups Overview',
+        more: 'View details',
+        cta: 'Inquire group',
       },
-      moveGrow: {
-        kicker: 'For the little ones',
-        title: 'Move & Grow',
-        sub: 'Movement, fun and development for children',
-        p: 'Playful, creative and age-appropriate — Move & Grow gets children moving and promotes coordination, balance and joy in their own body.',
-        btn: 'Learn more',
-      },
-      coffee: {
-        kicker: 'After your session',
-        title: 'Studio Café',
-        p: 'Relax after your class with a handcrafted coffee or matcha. Our little café is the perfect place to unwind.',
-        link: 'More about the Café',
+      preisePreview: {
+        kicker: 'Invest in Yourself',
+        title: 'Pricing & Packages',
+        sub: 'Flexible single drop-ins, attractive multi-class packages, or personalized solo and duo sessions.',
+        btn: 'View all pricing & packages',
       },
       gallery: {
         kicker: 'Glimpses',
@@ -319,6 +321,8 @@ export const t = {
       title: 'Our Classes',
       sub: 'Find the training that suits you.',
       learnMore: 'Learn more',
+      groupsTitle: 'Classes for All Target Groups',
+      groupsSub: 'Tailored class formats for women, men, 50+, expecting mothers, and kids.',
       cta: {
         title: 'Ready for your first class?',
         p: 'Book your trial class now and experience EFY Studios.',
@@ -326,13 +330,23 @@ export const t = {
       },
     },
 
-    cafe: {
+    preise: {
       kicker: 'EFY Studios',
-      title: 'The Café',
-      introTitle: 'More than just Pilates.',
-      introText: 'Our little café is the perfect place to wind down before or after your session. Connect with others, enjoy a freshly brewed coffee or relax with a book.',
-      menuKicker: 'Our offerings',
-      menuTitle: 'Menu',
+      title: 'Pricing & Packages',
+      sub: 'Transparent, flexible, and effortlessly bookable. Discover the ideal package for your journey.',
+      tabsTitle: 'Select your category',
+      popular: 'Popular',
+      includedTitle: 'Included in every class',
+      includedItems: [
+        'Small, intimate groups for maximum individualized attention',
+        'State-of-the-art Reformers and premium equipment included',
+        'Free cancellation up to 24 hours prior to class',
+        'Mats, towels & refreshments provided on-site',
+      ],
+      infoTitle: 'Good to know',
+      infoText: 'All class packs and passes are seamlessly managed via Eversports. Passes remain flexible from the date of purchase.',
+      contactCta: 'Have questions about bespoke packages or private sessions?',
+      contactBtn: 'Contact us',
     },
 
     about: {

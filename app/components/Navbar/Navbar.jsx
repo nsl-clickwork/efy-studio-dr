@@ -58,43 +58,48 @@ export default function Navbar() {
     <>
       <nav className={navClass} id="main-nav">
         <div className={styles.navbarInner}>
-          <Link 
-            href="/" 
-            className={styles.logoLink} 
-            onClick={(e) => {
-              if (window.location.pathname === '/') {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }
-              setMenuOpen(false);
-            }}
-          >
-            <Image
-              src="/images/logo.svg"
-              alt="EFY Studios Logo"
-              width={74}
-              height={74}
-              className={styles.logoSvg}
-              priority
-            />
-          </Link>
+          <div className={styles.navGroupLeft}>
+            <Link 
+              href="/" 
+              className={styles.logoLink} 
+              onClick={(e) => {
+                if (window.location.pathname === '/') {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+                setMenuOpen(false);
+              }}
+            >
+              <Image
+                src="/images/logo.svg"
+                alt="EFY Studios Logo"
+                width={84}
+                height={84}
+                className={styles.logoSvg}
+                priority
+              />
+            </Link>
 
-          <div className={styles.navLinks}>
-            {navigation.map((item) => (
-              <Link 
-                key={item.href} 
-                href={item.href} 
-                className={styles.navLink}
-                onClick={(e) => {
-                  if (pathname === item.href) {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }
-                }}
-              >
-                {tr[item.key]}
-              </Link>
-            ))}
+            <div className={styles.navLinks}>
+              {navigation.map((item) => (
+                <Link 
+                  key={item.href} 
+                  href={item.href} 
+                  className={`${styles.navLink} ${pathname === item.href ? styles['navLink--active'] : ''}`}
+                  onClick={(e) => {
+                    if (pathname === item.href) {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  {tr[item.key]}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className={styles.navActionsRight}>
             <a
               href={studioInfo.bookingUrl}
               target="_blank"

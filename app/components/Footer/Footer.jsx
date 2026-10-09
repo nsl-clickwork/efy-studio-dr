@@ -55,7 +55,7 @@ export default function Footer() {
           <div className={styles.footerLinks}>
             <Link href="/ueber-uns" className={styles.footerLink}>{tr.ueberUns}</Link>
             <Link href="/stundenplan" className={styles.footerLink}>{tr.stundenplan}</Link>
-            <Link href="/cafe" className={styles.footerLink}>{tr.studioCafe}</Link>
+            <Link href="/preise" className={styles.footerLink}>{tr.preise}</Link>
             <Link href="/kontakt" className={styles.footerLink}>{tr.kontakt}</Link>
           </div>
         </div>
@@ -67,8 +67,7 @@ export default function Footer() {
             <Link href="/kurse/reformer" className={styles.footerLink}>Reformer</Link>
             <Link href="/kurse/barre" className={styles.footerLink}>Barre</Link>
             <Link href="/kurse/mat" className={styles.footerLink}>Mat</Link>
-            <Link href="/kurse/prenatal" className={styles.footerLink}>Pre & Postnatal</Link>
-            <Link href="/kurse/move-grow" className={styles.footerLink}>Move & Grow</Link>
+            <Link href="/kurse#gruppen" className={styles.footerLink}>{lang === 'de' ? 'Fokusgruppen (Women, Men, 50+)' : 'Special Groups (Women, Men, 50+)'}</Link>
           </div>
         </div>
 
