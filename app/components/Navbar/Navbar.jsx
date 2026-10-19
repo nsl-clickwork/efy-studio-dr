@@ -73,8 +73,8 @@ export default function Navbar() {
               <Image
                 src="/images/logo.svg"
                 alt="EFY Studios Logo"
-                width={84}
-                height={84}
+                width={58}
+                height={58}
                 className={styles.logoSvg}
                 priority
               />

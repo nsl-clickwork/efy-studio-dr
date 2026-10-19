@@ -23,7 +23,7 @@
   justify-content: center;
   z-index: 1001;
   text-decoration: none;
-  margin-left: 0;
+  margin-left: 1.5rem;
 }
 
 .navbar--transparent {
@@ -48,13 +48,13 @@
 .navGroupLeft {
   display: flex;
   align-items: center;
-  gap: 3.25rem;
+  gap: 2.75rem;
   pointer-events: auto;
 }
 
 /* Logo */
 .logoSvg {
-  height: 82px;
+  height: 58px;
   width: auto;
   display: block;
   /* Invert black SVG to white so mix-blend-mode: difference automatically inverts it across dark and light backgrounds */
@@ -81,18 +81,23 @@
   align-items: center;
   gap: 2.25rem;
   pointer-events: auto;
+  line-height: 1;
 }
 
 .navLink {
   color: var(--cream);
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  line-height: 1;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   transition: color var(--transition-fast), opacity var(--transition-fast);
   position: relative;
   opacity: 0.9;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0;
 }
 
 .navLink:hover {
@@ -111,7 +116,7 @@
   bottom: -4px;
   left: 0;
   width: 0;
-  height: 1px;
+  height: 1.5px;
   transition: width var(--transition-medium);
 }
 
@@ -336,7 +341,7 @@
     padding-bottom: 10px;
   }
   .logoSvg {
-    height: 52px;
+    height: 46px;
   }
   .logoLink {
     margin-left: 0;
