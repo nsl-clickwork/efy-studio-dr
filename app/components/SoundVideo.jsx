@@ -2,9 +2,13 @@
 
 import { useEffect, useRef } from 'react';
 
+// Events that count as a user activation on desktop and mobile
+// (iOS Safari / Android Chrome only unlock audio on a tap, not a scroll).
+const UNLOCK_EVENTS = ['pointerup', 'touchend', 'click', 'keydown'];
+
 // Autoplay video with sound on by default. Browsers block unmuted autoplay
-// until the user interacts with the page, so we fall back to muted playback
-// and unmute on the first interaction.
+// until the user interacts with the page, so we start muted (which every
+// browser, including mobile, allows) and unmute as soon as we're permitted.
 export default function SoundVideo(props) {
   const ref = useRef(null);
 
@@ -12,22 +16,29 @@ export default function SoundVideo(props) {
     const video = ref.current;
     if (!video) return;
 
-    const events = ['pointerdown', 'keydown', 'touchend'];
-    const unmute = () => {
-      video.muted = false;
+    const removeListeners = () =>
+      UNLOCK_EVENTS.forEach((e) => window.removeEventListener(e, unmute));
+
+    const playMuted = () => {
+      video.muted = true;
       video.play().catch(() => {});
-      events.forEach((e) => window.removeEventListener(e, unmute));
     };
+
+    // Keep listening until unmuted playback actually succeeds, since some
+    // touches (e.g. the end of a scroll) don't grant permission.
+    function unmute() {
+      video.muted = false;
+      video.play().then(removeListeners).catch(playMuted);
+    }
 
     video.muted = false;
     video.play().catch(() => {
-      video.muted = true;
-      video.play().catch(() => {});
-      events.forEach((e) => window.addEventListener(e, unmute, { once: true }));
+      playMuted();
+      UNLOCK_EVENTS.forEach((e) => window.addEventListener(e, unmute, { passive: true }));
     });
 
-    return () => events.forEach((e) => window.removeEventListener(e, unmute));
+    return removeListeners;
   }, []);
 
-  return <video ref={ref} autoPlay loop playsInline {...props} />;
+  return <video ref={ref} autoPlay loop muted playsInline preload="auto" {...props} />;
 }
