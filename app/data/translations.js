@@ -28,9 +28,9 @@ export const t = {
 
     home: {
       hero: {
-        kicker: 'Boutique Pilates · Lichterfelde West',
-        title: 'Stärke.<br />Haltung.<br />Eleganz.',
-        sub: 'Kleine Gruppen. Persönliche Betreuung. Ein Studio, das sich anders anfühlt.',
+        kicker: 'Boutique Pilates Studio · Lichterfelde West',
+        title: 'Stärke.<br />Haltung.<br />Präzision.',
+        sub: 'Bewusst bewegen. Kleine Gruppen. Persönliche Betreuung.',
         ctaBook: 'Probestunde buchen',
         ctaCourses: 'Alle Kurse entdecken',
         scroll: 'Scroll',
@@ -38,8 +38,10 @@ export const t = {
       philosophy: {
         kicker: 'Unsere Philosophie',
         title: 'Bewegung mit Bedeutung',
-        p1: 'EFY Studios ist mehr als ein Pilates-Studio. Es ist ein Ort, an dem Stärke, Haltung und Wohlbefinden in einer ruhigen, persönlichen Atmosphäre zusammenfinden.',
-        p2: 'Kleine Gruppen, erfahrene Trainer und ein Raum, der zum Loslassen einlädt — für Frauen, die mehr wollen als nur Training.',
+        p1: 'Pilates ist mehr als eine Trainingsmethode. Es ist die bewusste Verbindung von Körper und Geist – eine Praxis, die uns lehrt, mit Präzision zu bewegen, unsere Kraft zu entdecken und unseren Körper besser zu verstehen.',
+        p2: 'Bei EFY STUDIOS verbinden wir die Prinzipien der klassischen Pilates-Methode mit einer modernen, persönlichen Trainingsphilosophie. In kleinen Gruppen und einer ruhigen Atmosphäre schaffen wir Raum für bewusste Bewegung, individuelle Entwicklung und Wohlbefinden. Denn wahre Stärke entsteht nicht nur durch das, was wir körperlich leisten, sondern auch durch die Verbindung zu uns selbst.',
+        quote: '„Contrology entwickelt den Körper, korrigiert die Haltungen, stellt körperliche Vitalität wieder her und stärkt den Geist.“',
+        quoteAuthor: 'Joseph Pilates',
         link: 'Mehr über uns',
       },
       services: {
@@ -54,7 +56,7 @@ export const t = {
         btn: 'Reformer Kurs buchen',
       },
       editorialBarre: {
-        kicker: 'Kraft trifft Anmut',
+        kicker: 'Kraft trifft Eleganz',
         title: 'Barre Pilates',
         p1: 'Eine elegante Verbindung aus Pilates, Ballett und funktionellem Training. Barre formt, strafft und stärkt — mit Freude an der Bewegung.',
         btn: 'Barre entdecken',
@@ -62,7 +64,7 @@ export const t = {
       editorialMat: {
         kicker: 'Zurück zum Ursprung',
         title: 'Mat Pilates',
-        p1: 'Klassisches Pilates auf der Matte — Kernstabilität und Achtsamkeit. Hier stärkst du deine Kernmuskulatur und verbesserst deine Beweglichkeit.',
+        p1: 'Mat Pilates verbindet bewusste Atmung, präzise Bewegung und gezielte Kräftigung. Mit dem eigenen Körpergewicht stärkst du deine Mitte, verbesserst deine Beweglichkeit und entwickelst ein tieferes Körperbewusstsein – in deinem eigenen Tempo.',
         btn: 'Mat Pilates entdecken',
       },
       classTypes: {
@@ -101,13 +103,13 @@ export const t = {
       },
       finalCta: {
         title: 'Deine erste Stunde.',
-        p: 'Starte jetzt deine Pilates-Reise bei EFY Studios.',
+        p: 'Starte jetzt deine Pilates-Reise bei EFY STUDIOS.',
         btn: 'Probestunde buchen',
       },
     },
 
     kurse: {
-      kicker: 'EFY Studios',
+      kicker: 'EFY STUDIOS',
       title: 'Unsere Kurse',
       sub: 'Finde das Training, das zu dir passt.',
       learnMore: 'Mehr erfahren',
@@ -115,13 +117,13 @@ export const t = {
       groupsSub: 'Spezifische Kursformate für Frauen, Männer, 50+, werdende Mütter und Kinder.',
       cta: {
         title: 'Bereit für deine erste Stunde?',
-        p: 'Buche jetzt deine Probestunde und erlebe EFY Studios.',
+        p: 'Buche jetzt deine Probestunde und erlebe EFY STUDIOS.',
         btn: 'Jetzt buchen',
       },
     },
 
     preise: {
-      kicker: 'EFY Studios',
+      kicker: 'EFY STUDIOS',
       title: 'Preise & Pakete',
       sub: 'Transparent, flexibel und unkompliziert buchbar. Finde das perfekte Format für deine Ziele.',
       tabsTitle: 'Wähle deine Kategorie',
@@ -144,7 +146,7 @@ export const t = {
       title: 'Über uns',
       visionKicker: 'Unsere Vision',
       visionTitle: 'Ein Raum für dich.',
-      p1: 'EFY Studios wurde aus der Überzeugung heraus gegründet, dass effektives Training und eine stilvolle, beruhigende Atmosphäre kein Widerspruch sein müssen. Wir wollten einen Ort schaffen, an dem man nicht nur seinen Körper stärkt, sondern auch zur Ruhe kommt.',
+      p1: 'EFY STUDIOS wurde aus der Überzeugung heraus gegründet, dass effektives Training und eine stilvolle, beruhigende Atmosphäre kein Widerspruch sein müssen. Wir wollten einen Ort schaffen, an dem man nicht nur seinen Körper stärkt, sondern auch zur Ruhe kommt.',
       p2: 'In unserem Boutique Studio in Lichterfelde West trainieren wir bewusst in kleinen Gruppen. Das ermöglicht es unseren erfahrenen Trainerinnen, individuell auf deine Bedürfnisse einzugehen und sicherzustellen, dass du jede Übung präzise und wirkungsvoll ausführst.',
       teamKicker: 'Das Team',
       teamTitle: 'Wer wir sind',
@@ -156,7 +158,7 @@ export const t = {
     },
 
     stundenplan: {
-      kicker: 'EFY Studios',
+      kicker: 'EFY STUDIOS',
       title: 'Stundenplan',
       sub: 'Finde deine Klasse und buche direkt online über Eversports.',
       widgetTitle: 'Online Buchung',
@@ -238,9 +240,9 @@ export const t = {
 
     home: {
       hero: {
-        kicker: 'Boutique Pilates · Lichterfelde West',
-        title: 'Strength.<br />Posture.<br />Elegance.',
-        sub: 'Small groups. Personal attention. A studio that feels different.',
+        kicker: 'Boutique Pilates Studio · Lichterfelde West',
+        title: 'Strength.<br />Posture.<br />Precision.',
+        sub: 'Mindful movement. Small groups. Personal attention.',
         ctaBook: 'Book a trial class',
         ctaCourses: 'Explore all classes',
         scroll: 'Scroll',
@@ -248,8 +250,10 @@ export const t = {
       philosophy: {
         kicker: 'Our Philosophy',
         title: 'Movement with Meaning',
-        p1: 'EFY Studios is more than a Pilates studio. It is a place where strength, posture and wellbeing come together in a calm, personal atmosphere.',
-        p2: 'Small groups, experienced instructors and a space that invites you to let go — for women who want more than just a workout.',
+        p1: 'Pilates is more than a training method. It is the mindful connection of body and mind – a practice that teaches us to move with precision, discover our strength and understand our body better.',
+        p2: 'At EFY STUDIOS, we combine the principles of the classical Pilates method with a modern, personal training philosophy. In small groups and a calm atmosphere, we create space for mindful movement, individual growth and wellbeing. Because true strength comes not only from what we achieve physically, but also from the connection to ourselves.',
+        quote: '“Contrology develops the body uniformly, corrects wrong postures, restores physical vitality, invigorates the mind.”',
+        quoteAuthor: 'Joseph Pilates',
         link: 'More about us',
       },
       services: {
@@ -264,7 +268,7 @@ export const t = {
         btn: 'Book a Reformer class',
       },
       editorialBarre: {
-        kicker: 'Strength Meets Grace',
+        kicker: 'Strength Meets Elegance',
         title: 'Barre Pilates',
         p1: 'An elegant combination of Pilates, ballet and functional training. Barre shapes, tones and strengthens — with joy of movement.',
         btn: 'Discover Barre',
@@ -272,7 +276,7 @@ export const t = {
       editorialMat: {
         kicker: 'Back to Basics',
         title: 'Mat Pilates',
-        p1: 'Classic mat Pilates — core stability and mindfulness. Here you strengthen your core, improve your mobility and body awareness.',
+        p1: 'Mat Pilates combines mindful breathing, precise movement and targeted strengthening. Using your own body weight, you strengthen your core, improve your mobility and develop a deeper body awareness – at your own pace.',
         btn: 'Discover Mat Pilates',
       },
       classTypes: {
@@ -311,13 +315,13 @@ export const t = {
       },
       finalCta: {
         title: 'Your first class.',
-        p: 'Start your Pilates journey at EFY Studios today.',
+        p: 'Start your Pilates journey at EFY STUDIOS today.',
         btn: 'Book a trial class',
       },
     },
 
     kurse: {
-      kicker: 'EFY Studios',
+      kicker: 'EFY STUDIOS',
       title: 'Our Classes',
       sub: 'Find the training that suits you.',
       learnMore: 'Learn more',
@@ -325,13 +329,13 @@ export const t = {
       groupsSub: 'Tailored class formats for women, men, 50+, expecting mothers, and kids.',
       cta: {
         title: 'Ready for your first class?',
-        p: 'Book your trial class now and experience EFY Studios.',
+        p: 'Book your trial class now and experience EFY STUDIOS.',
         btn: 'Book now',
       },
     },
 
     preise: {
-      kicker: 'EFY Studios',
+      kicker: 'EFY STUDIOS',
       title: 'Pricing & Packages',
       sub: 'Transparent, flexible, and effortlessly bookable. Discover the ideal package for your journey.',
       tabsTitle: 'Select your category',
@@ -354,7 +358,7 @@ export const t = {
       title: 'About us',
       visionKicker: 'Our Vision',
       visionTitle: 'A space for you.',
-      p1: 'EFY Studios was founded on the belief that effective training and a stylish, calming atmosphere are not mutually exclusive. We wanted to create a place where you not only strengthen your body, but also find peace of mind.',
+      p1: 'EFY STUDIOS was founded on the belief that effective training and a stylish, calming atmosphere are not mutually exclusive. We wanted to create a place where you not only strengthen your body, but also find peace of mind.',
       p2: 'In our boutique studio in Lichterfelde West, we deliberately train in small groups. This allows our experienced instructors to attend to your individual needs and ensure that you perform every exercise precisely and effectively.',
       teamKicker: 'The Team',
       teamTitle: 'Who we are',
@@ -366,7 +370,7 @@ export const t = {
     },
 
     stundenplan: {
-      kicker: 'EFY Studios',
+      kicker: 'EFY STUDIOS',
       title: 'Schedule',
       sub: 'Find your class and book directly online via Eversports.',
       widgetTitle: 'Online booking',

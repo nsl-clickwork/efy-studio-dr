@@ -7,8 +7,8 @@ export const classes = [
     de: {
       title: 'Reformer Pilates',
       subtitle: 'Das Herzstück unseres Studios',
-      shortDesc: 'Ganzkörpertraining auf dem Reformer — für Kraft, Haltung und Flexibilität.',
-      longDesc: 'Reformer Pilates ist das Herzstück von EFY Studios. Mit dem Reformer trainierst du Kraft, Flexibilität und Haltung in einer fließenden, kontrollierten Bewegung. Die federbetriebene Plattform bietet variablen Widerstand für ein effektives Ganzkörpertraining — angepasst an dein Level.',
+      shortDesc: 'Gezieltes Ganzkörpertraining am Reformer – für Kraft, Stabilität, Haltung und fließende Bewegungen.',
+      longDesc: 'Reformer Pilates ist das Herzstück von EFY STUDIOS. Mit dem Reformer trainierst du Kraft, Flexibilität und Haltung in einer fließenden, kontrollierten Bewegung. Die federbetriebene Plattform bietet variablen Widerstand für ein effektives Ganzkörpertraining — angepasst an dein Level.',
       benefits: [
         'Ganzkörperkraft aufbauen',
         'Haltung verbessern',
@@ -22,8 +22,8 @@ export const classes = [
     en: {
       title: 'Reformer Pilates',
       subtitle: 'The Heart of Our Studio',
-      shortDesc: 'Full-body training on the Reformer — for strength, posture and flexibility.',
-      longDesc: 'Reformer Pilates is the heart of EFY Studios. With the Reformer, you train strength, flexibility and posture in a flowing, controlled movement. The spring-powered platform offers variable resistance for an effective full-body workout — adapted to your level.',
+      shortDesc: 'Targeted full-body training on the Reformer – for strength, stability, posture and flowing movement.',
+      longDesc: 'Reformer Pilates is the heart of EFY STUDIOS. With the Reformer, you train strength, flexibility and posture in a flowing, controlled movement. The spring-powered platform offers variable resistance for an effective full-body workout — adapted to your level.',
       benefits: [
         'Build full-body strength',
         'Improve posture',
@@ -43,7 +43,7 @@ export const classes = [
     de: {
       title: 'Barre Pilates',
       subtitle: 'Kraft trifft Anmut',
-      shortDesc: 'Pilates trifft Ballett — elegantes Training für Straffung und Balance.',
+      shortDesc: 'Inspiriert von Ballett und Pilates – ein elegantes Training für Kraft, Ausdauer und Balance.',
       longDesc: 'Eine elegante Verbindung aus Pilates, Ballett und funktionellem Training. Barre formt, strafft und stärkt — mit Freude an der Bewegung. An der Ballettstange arbeitest du mit deinem eigenen Körpergewicht und kleinen Hilfsmitteln für sichtbare Ergebnisse.',
       benefits: [
         'Körper straffen und formen',
@@ -58,7 +58,7 @@ export const classes = [
     en: {
       title: 'Barre Pilates',
       subtitle: 'Strength Meets Grace',
-      shortDesc: 'Pilates meets ballet — elegant training for toning and balance.',
+      shortDesc: 'Inspired by ballet and Pilates – an elegant workout for strength, endurance and balance.',
       longDesc: 'An elegant combination of Pilates, ballet and functional training. Barre shapes, tones and strengthens — with joy of movement. At the ballet barre, you work with your own body weight and small props for visible results.',
       benefits: [
         'Tone and shape your body',
@@ -79,7 +79,7 @@ export const classes = [
     de: {
       title: 'Mat Pilates',
       subtitle: 'Zurück zum Ursprung',
-      shortDesc: 'Klassisches Pilates auf der Matte — Kernstabilität und Achtsamkeit.',
+      shortDesc: 'Bewusste Bewegung auf der Matte – für eine starke Körpermitte, mehr Beweglichkeit und ein besseres Körpergefühl.',
       longDesc: 'Mat Pilates ist die klassische Form des Pilates — auf der Matte, mit dem eigenen Körpergewicht. Hier stärkst du deine Kernmuskulatur, verbesserst deine Beweglichkeit und lernst, deinen Körper bewusst wahrzunehmen. Ideal als Einstieg oder als Ergänzung zum Reformer-Training.',
       benefits: [
         'Kernstabilität aufbauen',
@@ -94,7 +94,7 @@ export const classes = [
     en: {
       title: 'Mat Pilates',
       subtitle: 'Back to Basics',
-      shortDesc: 'Classic mat Pilates — core stability and mindfulness.',
+      shortDesc: 'Mindful movement on the mat – for a strong core, greater mobility and better body awareness.',
       longDesc: 'Mat Pilates is the classic form of Pilates — on the mat, using your own body weight. Here you strengthen your core, improve your mobility and learn to consciously perceive your body. Ideal as an introduction or as a complement to Reformer training.',
       benefits: [
         'Build core stability',
@@ -497,7 +497,7 @@ export const pricingCategories = [
 
 export const testimonials = [
   {
-    quote: 'EFY Studios hat mein Körpergefühl komplett verändert. Die Atmosphäre ist ruhig, die Trainer aufmerksam — ich fühle mich nach jeder Stunde stärker.',
+    quote: 'EFY STUDIOS hat mein Körpergefühl komplett verändert. Die Atmosphäre ist ruhig, die Trainer aufmerksam — ich fühle mich nach jeder Stunde stärker.',
     author: 'Maria K.',
     location: 'Lichterfelde West',
   },
@@ -521,7 +521,7 @@ export const cafeMenu = [
 ];
 
 export const studioInfo = {
-  name: 'EFY Studios',
+  name: 'EFY STUDIOS',
   tagline: 'Boutique Pilates in Lichterfelde West',
   address: {
     street: 'Curtiusstraße 9',

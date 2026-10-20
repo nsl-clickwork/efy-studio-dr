@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import ScrollReveal from './components/ScrollReveal';
-import { classes, targetGroups, pricingCategories, testimonials, studioInfo } from './data/content';
+import { classes, targetGroups, testimonials, studioInfo } from './data/content';
 import { useLanguage } from './context/LanguageContext';
 import { t } from './data/translations';
 
@@ -140,13 +140,17 @@ export default function HomePage() {
               <h2>{tr.philosophy.title}</h2>
               <p>{tr.philosophy.p1}</p>
               <p>{tr.philosophy.p2}</p>
+              <blockquote className={styles.philosophyQuote}>
+                <p>{tr.philosophy.quote}</p>
+                <cite>– {tr.philosophy.quoteAuthor} –</cite>
+              </blockquote>
               <Link href="/ueber-uns" className="link-arrow">{tr.philosophy.link}</Link>
             </ScrollReveal>
           </div>
           <ScrollReveal direction="right" delay={0.2} className={styles.philosophyImage}>
               <Image
                 src="/images/philosophy.png"
-                alt="Zwei Frauen beim Mat Pilates im EFY Studios"
+                alt="Zwei Frauen beim Mat Pilates im EFY STUDIOS"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 style={{ objectFit: 'cover', filter: 'brightness(1.05) contrast(1.01)' }}
@@ -255,12 +259,12 @@ export default function HomePage() {
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
         </ScrollReveal>
-        <div className={`${styles.editorialContent} ${styles['editorialContent--sand']}`}>
+        <div className={styles.editorialContent}>
           <ScrollReveal direction="right">
             <span className="kicker">{tr.editorialMat?.kicker}</span>
             <h2>{tr.editorialMat?.title}</h2>
             <p>{tr.editorialMat?.p1}</p>
-            <Link href="/kurse/mat" className="btn btn--outline" id="mat-link-btn">
+            <Link href="/kurse/mat" className="btn btn--outline-dark" id="mat-link-btn">
               {tr.editorialMat?.btn}
             </Link>
           </ScrollReveal>
@@ -333,48 +337,6 @@ export default function HomePage() {
               </ScrollReveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ═══════════ SECTION 9: PRICING PREVIEW ═══════════ */}
-      <section className={styles.pricingPreviewSection} id="preise-preview" data-navbar-theme="dark">
-        <div className={styles.pricingPreviewInner}>
-          <ScrollReveal>
-            <div className={styles.pricingPreviewHeader}>
-              <span className="kicker">{tr.preisePreview.kicker}</span>
-              <h2>{tr.preisePreview.title}</h2>
-              <p>{tr.preisePreview.sub}</p>
-            </div>
-          </ScrollReveal>
-
-          <div className={styles.pricingPreviewGrid}>
-            {pricingCategories.slice(0, 4).map((cat, cIdx) => {
-              const popularCard = cat.cards.find(c => c.highlight) || cat.cards[0];
-              return (
-                <ScrollReveal key={cat.id} delay={cIdx * 0.1}>
-                  <div className={styles.pricingPreviewCard} id={`pricing-preview-${cat.id}`}>
-                    <span className={styles.pricingPreviewBadge}>{popularCard.badge}</span>
-                    <h3 className={styles.pricingPreviewTitle}>{cat[lang].name}</h3>
-                    <div className={styles.pricingPreviewPrice}>{popularCard.price}</div>
-                    <p className={styles.pricingPreviewDesc}>
-                      {popularCard.classes} — {lang === 'de' ? popularCard.descDe : popularCard.descEn}
-                    </p>
-                    <Link href="/preise" className="btn btn--outline" style={{ width: '100%', textAlign: 'center' }}>
-                      {lang === 'de' ? 'Details & Buchen' : 'Details & Book'}
-                    </Link>
-                  </div>
-                </ScrollReveal>
-              );
-            })}
-          </div>
-
-          <ScrollReveal>
-            <div className={styles.pricingPreviewCtaRow}>
-              <Link href="/preise" className="btn btn--primary" id="home-view-all-prices-btn">
-                {tr.preisePreview.btn}
-              </Link>
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
@@ -456,9 +418,10 @@ export default function HomePage() {
               <h2>{tr.location.title}</h2>
               <p>{tr.location.p}</p>
               <address>
-                <strong>EFY Studios</strong><br />
+                <strong>EFY STUDIOS</strong><br />
                 {studioInfo.address.street}<br />
-                {studioInfo.address.city}
+                {studioInfo.address.zip} {studioInfo.address.city}<br />
+                {studioInfo.address.area}
               </address>
               <div className={styles.locationCtas}>
                 <a href={studioInfo.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">{tr.location.route}</a>
@@ -472,7 +435,7 @@ export default function HomePage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="EFY Studios Standort"
+                title="EFY STUDIOS Standort"
               />
           </ScrollReveal>
           </div>
@@ -489,7 +452,7 @@ export default function HomePage() {
               href={studioInfo.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn--dark"
+              className="btn btn--primary"
               id="final-booking-btn"
             >
               {tr.finalCta.btn}

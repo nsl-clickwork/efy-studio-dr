@@ -19,12 +19,12 @@ export default function Footer() {
           <Link href="/" className={styles.footerLogo}>
             <Image
               src="/images/logo.svg"
-              alt="EFY Studios Logo"
+              alt="EFY STUDIOS Logo"
               width={40}
               height={40}
               className={styles.footerLogoImg}
             />
-            <span className={styles.footerLogoText}>EFY Studios</span>
+            <span className={styles.footerLogoText}>EFY STUDIOS</span>
           </Link>
           <p className={styles.footerTagline}>
             {tr.tagline.split('\n').map((line, i) => (
@@ -85,7 +85,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className={styles.footerBottom}>
         <p className={styles.footerCopy}>
-          © {new Date().getFullYear()} EFY Studios. {tr.rights}
+          © {new Date().getFullYear()} EFY STUDIOS. {tr.rights}
         </p>
         <div className={styles.footerLegal}>
           <Link href="/impressum" className={styles.footerLegalLink}>{tr.impressum}</Link>
