@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import ScrollReveal from './components/ScrollReveal';
-import SoundVideo from './components/SoundVideo';
 import { classes, targetGroups, testimonials, studioInfo } from './data/content';
 import { useLanguage } from './context/LanguageContext';
 import { t } from './data/translations';
@@ -71,8 +70,12 @@ export default function HomePage() {
       {/* ═══════════ SECTION 1: HERO ═══════════ */}
       <section className={styles.hero} id="hero" data-navbar-theme="dark">
         <div className={styles.heroBg}>
-          <SoundVideo
+          <video
             src="/videos/h264-1.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
             className={styles.heroVideo}
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />

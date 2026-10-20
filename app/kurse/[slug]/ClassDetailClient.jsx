@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ScrollReveal from '@/app/components/ScrollReveal';
-import SoundVideo from '@/app/components/SoundVideo';
 import { classes, studioInfo } from '@/app/data/content';
 import styles from './slug.module.css';
 import { useLanguage } from '@/app/context/LanguageContext';
@@ -23,8 +22,12 @@ export default function ClassDetailClient({ slug }) {
     <>
       <section className={styles.hero} data-navbar-theme="dark">
         {cls.video ? (
-          <SoundVideo
+          <video
             src={cls.video}
+            autoPlay
+            loop
+            muted
+            playsInline
             style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', inset: 0, zIndex: 0 }}
           />
         ) : (
