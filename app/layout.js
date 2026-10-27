@@ -12,7 +12,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  metadataBase: new URL('https://efy-studio.up.railway.app'),
+  metadataBase: new URL('https://www.efystudios.de'),
   title: {
     default: 'EFY STUDIOS — Boutique Pilates in Lichterfelde West, Berlin',
     template: '%s | EFY STUDIOS Berlin',
@@ -28,7 +28,7 @@ export const metadata = {
   openGraph: {
     title: 'EFY STUDIOS — Boutique Pilates in Lichterfelde West, Berlin',
     description: 'Premium Pilates Studio in Berlin Lichterfelde West. Reformer, Barre, Mat Pilates in kleinen Gruppen.',
-    url: 'https://efy-studio.up.railway.app',
+    url: 'https://www.efystudios.de',
     siteName: 'EFY STUDIOS',
     locale: 'de_DE',
     type: 'website',
@@ -44,9 +44,6 @@ export const metadata = {
     index: true,
     follow: true,
   },
-  alternates: {
-    canonical: 'https://efystudio.de',
-  },
 };
 
 export default function RootLayout({ children }) {
@@ -61,7 +58,7 @@ export default function RootLayout({ children }) {
               '@type': 'SportsActivityLocation',
               name: 'EFY STUDIOS',
               description: 'Boutique Pilates Studio in Berlin Lichterfelde West',
-              url: 'https://efystudio.de',
+              url: 'https://www.efystudios.de',
               telephone: '+49 30 XXXXXXX',
               email: 'info@efystudio.de',
               address: {
