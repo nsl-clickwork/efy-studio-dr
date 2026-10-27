@@ -12,7 +12,7 @@ export const t = {
     },
 
     footer: {
-      tagline: 'Boutique Pilates in Lichterfelde West.\nStärke. Haltung. Eleganz.',
+      tagline: 'Boutique Pilates in Lichterfelde West.\nStärke. Haltung. Präzision.',
       colStudio: 'Studio',
       colKurse: 'Kurse',
       colMehr: 'Mehr',
@@ -224,7 +224,7 @@ export const t = {
     },
 
     footer: {
-      tagline: 'Boutique Pilates in Lichterfelde West.\nStrength. Posture. Elegance.',
+      tagline: 'Boutique Pilates in Lichterfelde West.\nStrength. Posture. Precision.',
       colStudio: 'Studio',
       colKurse: 'Classes',
       colMehr: 'More',
