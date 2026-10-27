@@ -425,7 +425,7 @@ export default function HomePage() {
               </address>
               <div className={styles.locationCtas}>
                 <a href={studioInfo.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">{tr.location.route}</a>
-                <a href={`mailto:${studioInfo.email}`} className="btn btn--outline">{tr.location.email}</a>
+                <a href={`mailto:${studioInfo.contact.email}`} className="btn btn--outline">{tr.location.email}</a>
               </div>
             </ScrollReveal>
           </div>

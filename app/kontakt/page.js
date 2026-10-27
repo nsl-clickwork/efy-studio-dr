@@ -12,18 +12,16 @@ export default function KontaktPage() {
   const { lang } = useLanguage();
   const tr = t[lang].kontakt;
 
+  // No mail backend yet: hand the message to the visitor's email app, addressed to the studio
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormStatus('submitting');
+    const data = new FormData(e.target);
+    const subjectLabel = tr.form.subjectOptions.find((opt) => opt.value === data.get('subject'))?.label;
+    const subject = `${subjectLabel} – ${data.get('name')}`;
+    const body = `${data.get('message')}\n\n${data.get('name')}\n${data.get('email')}`;
 
-    setTimeout(() => {
-      setFormStatus('success');
-      e.target.reset();
-
-      setTimeout(() => {
-        setFormStatus('idle');
-      }, 5000);
-    }, 1500);
+    window.location.href = `mailto:${studioInfo.contact.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setFormStatus('success');
   };
 
   return (
@@ -96,15 +94,15 @@ export default function KontaktPage() {
                 <button
                   type="submit"
                   className={`btn btn--dark ${styles.submitBtn}`}
-                  disabled={formStatus === 'submitting'}
                   id="contact-submit-btn"
                 >
-                  {formStatus === 'submitting' ? tr.form.submitting : tr.form.submit}
+                  {tr.form.submit}
                 </button>
 
                 {formStatus === 'success' && (
                   <div className={styles.successMessage}>
-                    {tr.form.success}
+                    {tr.form.success}{' '}
+                    <a href={`mailto:${studioInfo.contact.email}`}>{studioInfo.contact.email}</a>
                   </div>
                 )}
               </form>

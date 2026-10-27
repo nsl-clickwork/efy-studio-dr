@@ -59,7 +59,7 @@
 - Thông tin phòng tập chính thức (studioInfo trong app/data/content.js):
   + Tên: EFY STUDIOS (Boutique Pilates Berlin)
   + Địa chỉ: Curtiusstraße 9, 12205 Berlin (Lichterfelde West)
-  + Email: info@efystudio.de
+  + Email: info@efystudios.de (tạm thời — chờ khách xác nhận địa chỉ chính xác)
   + Instagram: @efy.studios (https://www.instagram.com/efy.studios/)
   + Hệ thống đặt lịch trực tuyến: Eversports (https://www.eversports.de/)
   + Giờ mở cửa: Thứ 2 – Thứ 6: 08:00 – 21:00; Thứ 7: 09:00 – 16:00; Chủ Nhật: Đóng cửa.

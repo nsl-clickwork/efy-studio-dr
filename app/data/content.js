@@ -530,7 +530,7 @@ export const studioInfo = {
     area: 'Lichterfelde West',
   },
   contact: {
-    email: 'info@efystudio.de',
+    email: 'info@efystudios.de',
     phone: '+49 30 XXXXXXX',
     instagram: 'https://www.instagram.com/efy.studios/',
   },

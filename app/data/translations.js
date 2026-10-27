@@ -195,8 +195,7 @@ export const t = {
         message: 'Nachricht',
         messagePlaceholder: 'Wie können wir dir helfen?',
         submit: 'Nachricht senden',
-        submitting: 'Wird gesendet...',
-        success: 'Vielen Dank für deine Nachricht. Wir melden uns so schnell wie möglich bei dir!',
+        success: 'Dein E-Mail-Programm wurde mit deiner Nachricht geöffnet – bitte dort noch auf „Senden“ klicken. Falls sich nichts geöffnet hat, schreib uns direkt an',
       },
     },
 
@@ -407,8 +406,7 @@ export const t = {
         message: 'Message',
         messagePlaceholder: 'How can we help you?',
         submit: 'Send message',
-        submitting: 'Sending...',
-        success: 'Thank you for your message. We will get back to you as soon as possible!',
+        success: 'Your email app has opened with your message – please click "Send" there. If nothing opened, write to us directly at',
       },
     },
 
