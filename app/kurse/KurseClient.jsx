@@ -57,7 +57,7 @@ export default function KurseClient() {
       </section>
 
       {/* ═══════════ CTA & PRICING TEASER ═══════════ */}
-      <section className="section section--sand" data-navbar-theme="light">
+      <section className={`section section--sand ${styles.cta}`} data-navbar-theme="light">
         <ScrollReveal>
           <h2 style={{ fontStyle: 'italic', marginBottom: 'var(--space-xs)' }}>{tr.cta.title}</h2>
           <p style={{ margin: '0 auto var(--space-md)', maxWidth: '500px' }}>{tr.cta.p}</p>
@@ -66,7 +66,7 @@ export default function KurseClient() {
               {tr.cta.btn}
             </a>
             <Link href="/preise" className="btn btn--outline-dark" id="kurse-pricing-btn">
-              {lang === 'de' ? 'Preise & Tarife ansehen' : 'View Pricing & Packages'}
+              {tr.cta.pricingBtn}
             </Link>
           </div>
         </ScrollReveal>

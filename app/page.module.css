@@ -926,15 +926,23 @@
 
 .locationAddress {
   font-size: 0.95rem;
+  font-style: normal;
   line-height: 1.9;
   margin-bottom: var(--space-md);
-  opacity: 0.8;
+  color: var(--dark);
 }
 
 .locationHours {
   font-size: 0.85rem;
   line-height: 2;
-  color: var(--taupe);
+  color: var(--brown);
+  margin-bottom: var(--space-md);
+}
+
+.locationCtas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .locationMap {

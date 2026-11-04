@@ -566,10 +566,10 @@ export const studioInfo = {
   },
   contact: {
     email: 'kontakt@efystudios.de',
-    phone: '+49 30 XXXXXXX',
     instagram: 'https://www.instagram.com/efy.studios/',
   },
   bookingUrl: 'https://www.eversports.de/',
+  googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=Curtiusstra%C3%9Fe%209%2C%2012205%20Berlin',
   openingHours: {
     de: ['Montag–Samstag: 09:00–20:00 Uhr', 'Sonntag: 09:00–17:00 Uhr'],
     en: ['Monday–Saturday: 9:00 am–8:00 pm', 'Sunday: 9:00 am–5:00 pm'],

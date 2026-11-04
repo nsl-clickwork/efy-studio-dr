@@ -59,7 +59,6 @@ export default function RootLayout({ children }) {
               name: 'EFY STUDIOS',
               description: 'Boutique Pilates Studio in Berlin Lichterfelde West',
               url: 'https://www.efystudios.de',
-              telephone: '+49 30 XXXXXXX',
               email: 'kontakt@efystudios.de',
               address: {
                 '@type': 'PostalAddress',

@@ -100,6 +100,8 @@ export const t = {
       location: {
         kicker: 'Besuche uns',
         title: 'Unser Studio',
+        route: 'Route planen',
+        email: 'E-Mail schreiben',
       },
       finalCta: {
         title: 'Deine erste Stunde.',
@@ -117,6 +119,7 @@ export const t = {
         title: 'Bereit für deine erste Stunde?',
         p: 'Buche jetzt deine Probestunde und erlebe EFY STUDIOS.',
         btn: 'Jetzt buchen',
+        pricingBtn: 'Preise & Pakete ansehen',
       },
     },
 
@@ -315,6 +318,8 @@ export const t = {
       location: {
         kicker: 'Visit us',
         title: 'Our Studio',
+        route: 'Get directions',
+        email: 'Send an email',
       },
       finalCta: {
         title: 'Your first class.',
@@ -332,6 +337,7 @@ export const t = {
         title: 'Ready for your first class?',
         p: 'Book your trial class now and experience EFY STUDIOS.',
         btn: 'Book now',
+        pricingBtn: 'View pricing & packages',
       },
     },
 

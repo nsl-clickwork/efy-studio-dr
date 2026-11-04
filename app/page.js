@@ -410,28 +410,32 @@ export default function HomePage() {
       </section>
 
       {/* ═══════════ SECTION 13: LOCATION ═══════════ */}
-      <section className={styles.location} id="kontakt" data-navbar-theme="dark">
+      <section className={styles.location} id="kontakt" data-navbar-theme="light">
         <div className={styles.locationInner}>
           <div className={styles.locationContent}>
             <ScrollReveal direction="left">
-              <span className="kicker" style={{ color: 'var(--sand)' }}>{tr.location.kicker}</span>
+              <span className="kicker">{tr.location.kicker}</span>
               <h2>{tr.location.title}</h2>
-              <p>{tr.location.p}</p>
-              <address>
+              <address className={styles.locationAddress}>
                 <strong>EFY STUDIOS</strong><br />
                 {studioInfo.address.street}<br />
                 {studioInfo.address.zip} {studioInfo.address.city}<br />
                 {studioInfo.address.area}
               </address>
+              <p className={styles.locationHours}>
+                {studioInfo.openingHours[lang].map((line, i) => (
+                  <span key={i}>{i > 0 && <br />}{line}</span>
+                ))}
+              </p>
               <div className={styles.locationCtas}>
-                <a href={studioInfo.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary">{tr.location.route}</a>
-                <a href={`mailto:${studioInfo.contact.email}`} className="btn btn--outline">{tr.location.email}</a>
+                <a href={studioInfo.googleMapsUrl} target="_blank" rel="noopener noreferrer" className="btn btn--primary" id="location-route-btn">{tr.location.route}</a>
+                <a href={`mailto:${studioInfo.contact.email}`} className="btn btn--outline-dark" id="location-email-btn">{tr.location.email}</a>
               </div>
             </ScrollReveal>
           </div>
           <ScrollReveal direction="right" delay={0.2} className={styles.locationMap}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2430.8!2d13.307!3d52.433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCurtiusstra%C3%9Fe+9%2C+12205+Berlin!5e0!3m2!1sde!2sde!4v1"
+                src="https://www.google.com/maps?q=Curtiusstra%C3%9Fe+9,+12205+Berlin&hl=de&z=15&output=embed"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
