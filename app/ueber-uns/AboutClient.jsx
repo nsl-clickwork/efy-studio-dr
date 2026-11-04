@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import ScrollReveal from '@/app/components/ScrollReveal';
 import styles from './about.module.css';
 import { useLanguage } from '@/app/context/LanguageContext';
@@ -39,35 +38,31 @@ export default function AboutClient() {
         </div>
       </section>
 
-      <section className={styles.team} data-navbar-theme="light">
-        <div className={styles.teamInner}>
-          <ScrollReveal>
-            <div className={styles.teamHeader}>
-              <span className="kicker">{tr.teamKicker}</span>
-              <h2>{tr.teamTitle}</h2>
-              <p className={styles.teamSub}>{tr.teamSub}</p>
+      <section className={styles.founder} data-navbar-theme="light">
+        <div className={styles.founderInner}>
+          <ScrollReveal direction="left">
+            <div className={styles.founderImage}>
+              <span>{tr.imgPlaceholder}</span>
             </div>
           </ScrollReveal>
-
-          <div className={styles.teamGrid}>
-            {[1, 2, 3].map((i) => (
-              <ScrollReveal key={i} delay={i * 0.1}>
-                <div className={styles.teamCard}>
-                  <div className={styles.teamImage}>
-                    <div className={styles.teamPlaceholder}>
-                      <span>{tr.imgPlaceholder}</span>
-                    </div>
-                  </div>
-                  <div className={styles.teamInfo}>
-                    <h3>{tr.trainerName}</h3>
-                    <span className="kicker">{tr.trainerRole}</span>
-                    <p>{tr.trainerBio}</p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+          <ScrollReveal direction="right" delay={0.15}>
+            <article className={styles.founderText}>
+              <span className="kicker">{tr.founderKicker}</span>
+              <h2>{tr.founderTitle}</h2>
+              {tr.founderStory.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+              <p className={styles.signature}>{tr.founderName}</p>
+            </article>
+          </ScrollReveal>
         </div>
+      </section>
+
+      <section className={styles.closing} data-navbar-theme="light">
+        <ScrollReveal>
+          <span className="kicker">{tr.closingKicker}</span>
+          <p className={styles.closingText}>{tr.closing}</p>
+        </ScrollReveal>
       </section>
     </>
   );

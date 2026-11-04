@@ -90,12 +90,82 @@
   margin-bottom: var(--space-sm);
 }
 
+.metaNote {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--brown);
+}
+
+/* Formats accordion */
+.formats {
+  border-top: 1px solid var(--sand);
+  margin-bottom: var(--space-md);
+}
+
+.format {
+  border-bottom: 1px solid var(--sand);
+}
+
+.formatSummary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color var(--transition-medium);
+}
+
+.formatSummary::-webkit-details-marker {
+  display: none;
+}
+
+.formatSummary::after {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: var(--brown);
+}
+
+.format[open] .formatSummary::after {
+  content: '−';
+}
+
+.formatSummary:hover {
+  color: var(--brown);
+}
+
+.formatBody {
+  padding-bottom: var(--space-sm);
+}
+
+.formatBody p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+
+.formatKicker {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--taupe);
+  margin-bottom: 0.5rem;
+}
+
+.formatBody .formatMeta {
+  font-size: 0.8rem;
+  color: var(--brown);
+}
+
 .benefitsList {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
-  margin-bottom: var(--space-md);
 }
 
 .benefitsList li {

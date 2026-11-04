@@ -99,6 +99,24 @@
   box-shadow: 0 4px 14px rgba(30, 24, 18, 0.2);
 }
 
+/* === CATEGORY HEADER === */
+.categoryHeader {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.categoryHeader h2 {
+  font-style: italic;
+  margin-bottom: 0.4rem;
+}
+
+.categoryHeader p {
+  margin: 0 auto;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: var(--taupe);
+}
+
 /* === CARDS GRID === */
 .cardsGrid {
   display: grid;
@@ -106,6 +124,11 @@
   gap: 1.75rem;
   margin-bottom: var(--space-2xl);
   align-items: stretch;
+}
+
+.cardsGrid--single {
+  max-width: 380px;
+  margin-inline: auto;
 }
 
 .priceCard {
@@ -195,6 +218,20 @@
   color: var(--warm-white);
   line-height: 1;
   letter-spacing: -0.02em;
+}
+
+.cardUnit {
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  color: rgba(253, 251, 247, 0.7);
+}
+
+.cardNote {
+  font-size: 0.78rem;
+  letter-spacing: 0.5px;
+  color: var(--sand);
+  margin-top: -1rem;
+  margin-bottom: 1.75rem;
 }
 
 .cardActionWrapper {

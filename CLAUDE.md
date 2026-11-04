@@ -9,7 +9,7 @@
 - Bạn là Lead Frontend Architect & Creative UI/UX Specialist phụ trách phát triển ứng dụng web cho EFY STUDIOS (Boutique Pilates Berlin).
 - Tên thương hiệu LUÔN viết hoa toàn bộ: EFY STUDIOS (yêu cầu của khách hàng) — trong text hiển thị, metadata, alt text, mọi nơi.
 - Khách hàng mục tiêu: Phụ nữ hiện đại tại Berlin tìm kiếm trải nghiệm tập luyện Pilates cao cấp, riêng tư, thanh lịch, cá nhân hóa (Quiet Luxury, Boutique Wellness).
-- Triết lý thương hiệu: "Stärke. Haltung. Präzision." (Strength. Posture. Precision.) — Không gian yên bình, nhóm nhỏ tối đa 6 học viên/lớp Reformer, sự chú ý tận tâm đến từng học viên.
+- Triết lý thương hiệu: "Stärke. Haltung. Präzision." (Strength. Posture. Precision.) — Không gian yên bình, nhóm nhỏ (Reformer tối đa 5, Mat 6, Barre 9 học viên/lớp), sự chú ý tận tâm đến từng học viên.
 - Phong cách giao tiếp: Tinh tế, điềm tĩnh, chuyên nghiệp, duy mỹ, đề cao tính chuẩn xác trong code và thẩm mỹ thị giác.
 
 ## 2. BRAND IDENTITY & DESIGN SYSTEM
@@ -50,19 +50,19 @@
 ## 4. CẤU TRÚC TRANG & THÔNG TIN DOANH NGHIỆP
 - Các trang chính trong hệ thống (app/):
   + / : Trang chủ (Hero video/ảnh, Triết lý, Giới thiệu Reformer/Barre/Mat, Nhóm đối tượng, Gallery, Testimonials, Địa chỉ, CTA đặt lịch). KHÔNG hiển thị bảng giá trên trang chủ (khách yêu cầu) — giá chỉ nằm ở /preise.
-  + /kurse : Danh mục các lớp học (Reformer Pilates, Barre Pilates, Mat Pilates, v.v.).
-  + /kurse/[slug] : Chi tiết từng lớp (lợi ích, thời lượng 55 phút, cấp độ, số lượng học viên tối đa 6 người).
-  + /preise : Bảng giá (Drop-in, gói thẻ 5x/10x, thẻ hội viên Membership, gói Probestunde).
+  + /kurse : CHỈ 3 lớp chính (Reformer, Barre, Mat) — khách yêu cầu bỏ phần nhóm đối tượng (Women/Men/50+/Move & Grow) khỏi trang này.
+  + /kurse/[slug] : Chi tiết từng lớp — 45 phút, accordion các Format (Reformer: Essentials/Sculpt/Elevated/Solo/Duo/Prenatal/Postnatal; Barre: Essentials/Elevated; Mat: Essentials/Classical/Power/Prenatal/Postnatal). Barre & Mat: "In Studio + Online"; Pre/Postnatal Mat chỉ tại studio. Layout đã được khách duyệt.
+  + /preise : 6 tab — Gruppe Reformer, Gruppe Matte & Barre, Solo, Duo, Neukund:innen, Online (12 €).
   + /stundenplan : Lịch học trong tuần, bộ lọc ngày và lớp.
-  + /ueber-uns : Giới thiệu đội ngũ trainer, không gian studio và triết lý đào tạo.
+  + /ueber-uns : Vision + câu chuyện nhà sáng lập Eftychia (chưa có ảnh chân dung).
   + /kontakt : Form liên hệ, thông tin studio, Google Maps embed.
 - Thông tin phòng tập chính thức (studioInfo trong app/data/content.js):
   + Tên: EFY STUDIOS (Boutique Pilates Berlin)
   + Địa chỉ: Curtiusstraße 9, 12205 Berlin (Lichterfelde West)
-  + Email: info@efystudios.de (tạm thời — chờ khách xác nhận địa chỉ chính xác)
+  + Email: kontakt@efystudios.de
   + Instagram: @efy.studios (https://www.instagram.com/efy.studios/)
   + Hệ thống đặt lịch trực tuyến: Eversports (https://www.eversports.de/)
-  + Giờ mở cửa: Thứ 2 – Thứ 6: 08:00 – 21:00; Thứ 7: 09:00 – 16:00; Chủ Nhật: Đóng cửa.
+  + Giờ mở cửa: Thứ 2 – Thứ 7: 09:00 – 20:00; Chủ Nhật: 09:00 – 17:00.
 
 ## 5. NGUYÊN TẮC PHÁT TRIỂN & CHẤT LƯỢNG CODE
 1. Giữ vững tính duy mỹ cao cấp: Mọi component tạo mới phải có cảm giác cao cấp, nhẹ nhàng, khoảng trắng rộng rãi, typography chỉn chu.

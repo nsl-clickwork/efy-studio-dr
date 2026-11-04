@@ -67,7 +67,6 @@ export default function Footer() {
             <Link href="/kurse/reformer" className={styles.footerLink}>Reformer</Link>
             <Link href="/kurse/barre" className={styles.footerLink}>Barre</Link>
             <Link href="/kurse/mat" className={styles.footerLink}>Mat</Link>
-            <Link href="/kurse#gruppen" className={styles.footerLink}>{lang === 'de' ? 'Fokusgruppen (Women, Men, 50+)' : 'Special Groups (Women, Men, 50+)'}</Link>
           </div>
         </div>
 

@@ -59,54 +59,24 @@
   line-height: 1.9;
 }
 
-.team {
+.founder {
   padding: var(--space-xl) var(--space-md);
   background-color: var(--cream);
 }
 
-.teamInner {
+.founderInner {
   max-width: var(--max-width);
   margin: 0 auto;
-}
-
-.teamHeader {
-  text-align: center;
-  margin-bottom: var(--space-xl);
-}
-
-.teamHeader h2 {
-  font-style: italic;
-  margin-top: 0.5rem;
-  margin-bottom: var(--space-sm);
-}
-
-.teamSub {
-  max-width: 600px;
-  margin: 0 auto;
-  color: var(--taupe);
-}
-
-.teamGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1.3fr;
   gap: var(--space-lg);
+  align-items: start;
 }
 
-.teamCard {
-  background: var(--warm-white);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
-
-.teamImage {
+.founderImage {
   aspect-ratio: 4/5;
   background-color: var(--sand);
-  position: relative;
-}
-
-.teamPlaceholder {
-  position: absolute;
-  inset: 0;
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -114,28 +84,47 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  opacity: 0.5;
+  position: sticky;
+  top: calc(var(--nav-height) + var(--space-md));
 }
 
-.teamInfo {
-  padding: var(--space-md);
+.founderImage span {
+  opacity: 0.6;
+}
+
+.founderText h2 {
+  font-style: italic;
+  margin: 0.5rem 0 var(--space-md);
+}
+
+.founderText p {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+}
+
+.founderText .signature {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.8rem;
+  color: var(--brown);
+  margin-top: var(--space-sm);
+}
+
+.closing {
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--warm-white);
   text-align: center;
 }
 
-.teamInfo h3 {
+.closingText {
+  font-family: var(--font-display);
   font-style: italic;
-  margin-bottom: 0.2rem;
-}
-
-.teamInfo .kicker {
-  display: block;
-  margin-bottom: var(--space-sm);
-  color: var(--taupe);
-}
-
-.teamInfo p {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.4;
+  max-width: 760px;
+  margin: var(--space-sm) auto 0;
+  color: var(--dark);
 }
 
 @media (max-width: 768px) {
@@ -156,27 +145,24 @@
     font-size: 1rem;
   }
 
-  .team {
+  .founder,
+  .closing {
     padding: var(--space-lg) var(--space-sm);
   }
 
-  .teamCard {
-    border-radius: 0;
-  }
-
-  .teamInfo {
-    padding: var(--space-sm) var(--space-md);
-  }
-}
-
-@media (max-width: 600px) {
-  .teamGrid {
+  .founderInner {
     grid-template-columns: 1fr;
+  }
+
+  .founderImage {
+    position: static;
+    aspect-ratio: 4/3;
     max-width: 440px;
+    width: 100%;
     margin: 0 auto;
   }
 
-  .teamImage {
-    aspect-ratio: 4/3;
+  .founderText p {
+    font-size: 1rem;
   }
 }

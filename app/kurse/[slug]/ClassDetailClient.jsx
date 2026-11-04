@@ -66,6 +66,9 @@ export default function ClassDetailClient({ slug }) {
                 <div className={styles.metaItem}>
                   <span className={styles.metaLabel}>{tr.level}</span>
                   <span className={styles.metaValue}>{clsData.level}</span>
+                  {clsData.availability && (
+                    <span className={styles.metaNote}>{clsData.availability}</span>
+                  )}
                 </div>
               </div>
             </div>
@@ -73,12 +76,30 @@ export default function ClassDetailClient({ slug }) {
 
           <ScrollReveal delay={0.2}>
             <div className={styles.detailSidebar}>
-              <h3>{tr.benefits}</h3>
-              <ul className={styles.benefitsList}>
-                {clsData.benefits.map((b, i) => (
-                  <li key={i}>{b}</li>
+              <h3>{clsData.formatsTitle}</h3>
+              <div className={styles.formats}>
+                {clsData.formats.map((f) => (
+                  <details key={f.name} className={styles.format}>
+                    <summary className={styles.formatSummary}>{f.name}</summary>
+                    <div className={styles.formatBody}>
+                      <span className={styles.formatKicker}>{f.kicker}</span>
+                      <p>{f.desc}</p>
+                      <p className={styles.formatMeta}>{f.meta}</p>
+                      {f.note && <p className={styles.formatMeta}>{f.note}</p>}
+                      {f.expect && (
+                        <>
+                          <span className={styles.formatKicker}>{tr.expect}</span>
+                          <ul className={styles.benefitsList}>
+                            {f.expect.map((item) => (
+                              <li key={item}>{item}</li>
+                            ))}
+                          </ul>
+                        </>
+                      )}
+                    </div>
+                  </details>
                 ))}
-              </ul>
+              </div>
               <a
                 href={studioInfo.bookingUrl}
                 target="_blank"
@@ -87,7 +108,7 @@ export default function ClassDetailClient({ slug }) {
                 style={{ width: '100%', marginTop: 'var(--space-sm)' }}
                 id={`class-booking-${cls.slug}`}
               >
-                {tr.buchen}
+                {clsData.bookLabel}
               </a>
             </div>
           </ScrollReveal>

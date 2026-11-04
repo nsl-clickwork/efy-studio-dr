@@ -48,53 +48,59 @@ export default function PreiseClient() {
             </div>
           </div>
 
+          <div className={styles.categoryHeader}>
+            <h2>{currentCategory[lang].title}</h2>
+            <p>{currentCategory[lang].subtitle}</p>
+          </div>
+
           {/* Cards Grid */}
-          <div className={styles.cardsGrid}>
-            {currentCategory.cards.map((card, i) => (
-              <ScrollReveal key={`${currentCategory.id}-${i}`} delay={i * 0.08}>
-                <div
-                  className={`${styles.priceCard} ${card.highlight ? styles['priceCard--highlight'] : ''}`}
-                  id={`price-card-${currentCategory.id}-${i}`}
-                >
-                  {card.highlight && (
-                    <div className={styles.cardRibbon}>{tr.popular}</div>
-                  )}
-
-                  <div className={styles.cardHeader}>
-                    <span className={styles.cardBadge}>{card.badge}</span>
-                    <h2 className={styles.cardClasses}>{card.classes}</h2>
-                  </div>
-
-                  <p className={styles.cardDesc}>
-                    {lang === 'de' ? card.descDe : card.descEn}
-                  </p>
-
-                  <div className={styles.cardPriceRow}>
-                    <span className={styles.cardPrice}>{card.price}</span>
-                  </div>
-
-                  <div className={styles.cardActionWrapper}>
-                    {card.actionDe.includes('ANFRAGEN') ? (
-                      <Link
-                        href="/kontakt"
-                        className={`btn ${card.highlight ? 'btn--primary' : 'btn--outline-dark'} ${styles.cardBtn}`}
-                      >
-                        {lang === 'de' ? card.actionDe : card.actionEn}
-                      </Link>
-                    ) : (
-                      <a
-                        href={studioInfo.bookingUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`btn ${card.highlight ? 'btn--primary' : 'btn--outline-dark'} ${styles.cardBtn}`}
-                      >
-                        {lang === 'de' ? card.actionDe : card.actionEn}
-                      </a>
+          <div className={`${styles.cardsGrid} ${currentCategory.cards.length === 1 ? styles['cardsGrid--single'] : ''}`}>
+            {currentCategory.cards.map((card, i) => {
+              const c = card[lang];
+              const btnClass = `btn ${card.highlight ? 'btn--primary' : 'btn--outline-dark'} ${styles.cardBtn}`;
+              return (
+                <ScrollReveal key={`${currentCategory.id}-${i}`} delay={i * 0.08}>
+                  <div
+                    className={`${styles.priceCard} ${card.highlight ? styles['priceCard--highlight'] : ''}`}
+                    id={`price-card-${currentCategory.id}-${i}`}
+                  >
+                    {card.highlight && (
+                      <div className={styles.cardRibbon}>{tr.popular}</div>
                     )}
+
+                    <div className={styles.cardHeader}>
+                      <span className={styles.cardBadge}>{c.badge}</span>
+                      <h3 className={styles.cardClasses}>{c.name}</h3>
+                    </div>
+
+                    <p className={styles.cardDesc}>{c.desc}</p>
+
+                    <div className={styles.cardPriceRow}>
+                      <span className={styles.cardPrice}>{card.price}</span>
+                      {c.unit && <span className={styles.cardUnit}>{c.unit}</span>}
+                    </div>
+                    {c.note && <p className={styles.cardNote}>{c.note}</p>}
+
+                    <div className={styles.cardActionWrapper}>
+                      {card.inquire ? (
+                        <Link href="/kontakt" className={btnClass}>
+                          {c.action}
+                        </Link>
+                      ) : (
+                        <a
+                          href={studioInfo.bookingUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={btnClass}
+                        >
+                          {tr.book}
+                        </a>
+                      )}
+                    </div>
                   </div>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+            })}
           </div>
 
           {/* Features / Inclusions Box */}

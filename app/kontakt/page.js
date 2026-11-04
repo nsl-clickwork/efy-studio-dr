@@ -56,9 +56,9 @@ export default function KontaktPage() {
               <div className={styles.infoGroup}>
                 <span className="kicker">{tr.hoursLabel}</span>
                 <p>
-                  {studioInfo.openingHours.weekdays}<br />
-                  {studioInfo.openingHours.saturday}<br />
-                  {studioInfo.openingHours.sunday}
+                  {studioInfo.openingHours[lang].map((line, i) => (
+                    <span key={i}>{i > 0 && <br />}{line}</span>
+                  ))}
                 </p>
               </div>
             </div>
