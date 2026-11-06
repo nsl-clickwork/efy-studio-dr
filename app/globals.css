@@ -3,8 +3,7 @@
    Boutique Pilates · Lichterfelde West, Berlin
    ============================================ */
 
-/* --- Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap');
+/* --- Fonts: self-hosted via next/font in app/layout.js (no request to Google at runtime) --- */
 
 /* --- Design Tokens --- */
 :root {
@@ -20,8 +19,8 @@
   --overlay:    rgba(30, 24, 18, 0.55);
 
   /* Typography */
-  --font-display: 'Cormorant Garamond', Georgia, serif;
-  --font-body:    'Jost', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-body:    var(--font-jost), 'Jost', 'Helvetica Neue', Arial, sans-serif;
 
   /* Spacing */
   --space-xs:  0.5rem;

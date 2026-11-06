@@ -18,7 +18,7 @@ export default function Footer() {
         <div className={styles.footerBrand}>
           <Link href="/" className={styles.footerLogo}>
             <Image
-              src="/images/logo.svg"
+              src="/images/logo-nav.webp"
               alt="EFY STUDIOS Logo"
               width={40}
               height={40}
@@ -51,7 +51,7 @@ export default function Footer() {
 
         {/* Column 2 — Studio */}
         <div>
-          <h4 className={styles.footerTitle}>{tr.colStudio}</h4>
+          <h2 className={styles.footerTitle}>{tr.colStudio}</h2>
           <div className={styles.footerLinks}>
             <Link href="/ueber-uns" className={styles.footerLink}>{tr.ueberUns}</Link>
             <Link href="/stundenplan" className={styles.footerLink}>{tr.stundenplan}</Link>
@@ -62,7 +62,7 @@ export default function Footer() {
 
         {/* Column 3 — Kurse/Classes */}
         <div>
-          <h4 className={styles.footerTitle}>{tr.colKurse}</h4>
+          <h2 className={styles.footerTitle}>{tr.colKurse}</h2>
           <div className={styles.footerLinks}>
             <Link href="/kurse/reformer" className={styles.footerLink}>Reformer</Link>
             <Link href="/kurse/barre" className={styles.footerLink}>Barre</Link>
@@ -72,7 +72,7 @@ export default function Footer() {
 
         {/* Column 4 — Mehr/More */}
         <div>
-          <h4 className={styles.footerTitle}>{tr.colMehr}</h4>
+          <h2 className={styles.footerTitle}>{tr.colMehr}</h2>
           <div className={styles.footerLinks}>
             <Link href="/impressum" className={styles.footerLink}>{tr.impressum}</Link>
             <Link href="/datenschutz" className={styles.footerLink}>{tr.datenschutz}</Link>

@@ -71,7 +71,7 @@ export default function Navbar() {
               }}
             >
               <Image
-                src="/images/logo.svg"
+                src="/images/logo-nav.webp"
                 alt="EFY STUDIOS Logo"
                 width={58}
                 height={58}

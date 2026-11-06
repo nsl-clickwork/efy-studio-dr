@@ -1,14 +1,29 @@
+import { Cormorant_Garamond, Jost } from 'next/font/google';
 import '@/app/globals.css';
 import Navbar from '@/app/components/Navbar/Navbar';
 import Footer from '@/app/components/Footer/Footer';
 import Providers from '@/app/components/Providers';
+
+// Fonts are downloaded at build time and served from this site: no visitor data goes to Google.
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+  variable: '--font-cormorant',
+});
+const jost = Jost({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  display: 'swap',
+  variable: '--font-jost',
+});
 
 export const viewport = {
   themeColor: '#1E1812',
   viewportFit: 'cover',
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 };
 
 export const metadata = {
@@ -48,7 +63,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="de">
+    <html lang="de" className={`${cormorant.variable} ${jost.variable}`}>
       <head>
         <script
           type="application/ld+json"

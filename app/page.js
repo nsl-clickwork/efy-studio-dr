@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import ScrollReveal from './components/ScrollReveal';
+import LazyVideo from './components/LazyVideo';
 import { classes, testimonials, studioInfo } from './data/content';
 import { useLanguage } from './context/LanguageContext';
 import { t } from './data/translations';
@@ -66,11 +67,13 @@ export default function HomePage() {
       <section className={styles.hero} id="hero" data-navbar-theme="dark">
         <div className={styles.heroBg}>
           <video
-            src="/videos/h264-1.mp4"
+            src="/videos/h264-1-web.mp4"
+            poster="/images/hero-poster.webp"
             autoPlay
             loop
             muted
             playsInline
+            preload="auto"
             className={styles.heroVideo}
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
@@ -191,12 +194,8 @@ export default function HomePage() {
       {/* ═══════════ SECTION 5: EDITORIAL REFORMER ═══════════ */}
       <section className={styles.editorial} id="editorial-reformer" data-navbar-theme="dark">
         <ScrollReveal direction="left" className={styles.editorialImage}>
-          <video
-            src="/videos/h264-1.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
+          <LazyVideo
+            src="/videos/h264-1-web.mp4"
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
         </ScrollReveal>
@@ -221,12 +220,8 @@ export default function HomePage() {
       {/* ═══════════ SECTION 6: BARRE ═══════════ */}
       <section className={`${styles.editorial} ${styles['editorial--reverse']}`} id="editorial-barre" data-navbar-theme="cream">
         <ScrollReveal direction="right" threshold={0.2} className={styles.editorialImage}>
-          <video
+          <LazyVideo
             src="/videos/barre.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
             style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.02)' }}
           />
         </ScrollReveal>
@@ -245,12 +240,8 @@ export default function HomePage() {
       {/* ═══════════ SECTION 6.5: MAT PILATES ═══════════ */}
       <section className={styles.editorial} id="editorial-mat" data-navbar-theme="sand">
         <ScrollReveal direction="left" className={styles.editorialImage}>
-          <video
+          <LazyVideo
             src="/videos/h264-2-web.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
           />
         </ScrollReveal>
