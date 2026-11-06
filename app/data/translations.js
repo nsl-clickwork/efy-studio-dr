@@ -67,26 +67,6 @@ export const t = {
         p1: 'Mat Pilates verbindet bewusste Atmung, präzise Bewegung und gezielte Kräftigung. Mit dem eigenen Körpergewicht stärkst du deine Mitte, verbesserst deine Beweglichkeit und entwickelst ein tieferes Körperbewusstsein – in deinem eigenen Tempo.',
         btn: 'Mat Pilates entdecken',
       },
-      classTypes: {
-        kicker: 'Für jedes Level',
-        title: 'Finde deinen Kurs',
-        items: [
-          { icon: '○', title: 'Beginner', desc: 'Dein sanfter Einstieg in die Welt des Pilates.' },
-          { icon: '◐', title: 'Pre & Postnatal', desc: 'Sicher trainieren — vor und nach der Geburt.' },
-          { icon: '●', title: 'Move & Grow', desc: 'Bewegung, Spaß und Entwicklung für Kinder.' },
-          { icon: '◑', title: 'Intermediate', desc: 'Für alle mit Pilates-Erfahrung.' },
-          { icon: '◉', title: 'Private', desc: 'Individuelles 1:1 Training nach deinen Zielen.' },
-          { icon: '◒', title: 'Duo', desc: 'Zu zweit trainieren und motivieren.' },
-        ],
-      },
-      gruppen: {
-        kicker: 'Vielfalt & Fokus',
-        title: 'Kurse für jede Gruppe',
-        sub: 'Von Women only über gezielte Core-Arbeit für Männer bis hin zu 50+ Vitalität, Pre- & Postnatal und spielerischer Bewegung für Kinder — wir bieten spezialisierte Klassen für jede Lebensphase.',
-        tagTitle: 'Fokusgruppen im Überblick',
-        more: 'Details ansehen',
-        cta: 'Gruppe anfragen',
-      },
       preisePreview: {
         kicker: 'Investition in dich',
         title: 'Preise & Pakete',
@@ -284,26 +264,6 @@ export const t = {
         title: 'Mat Pilates',
         p1: 'Mat Pilates combines mindful breathing, precise movement and targeted strengthening. Using your own body weight, you strengthen your core, improve your mobility and develop a deeper body awareness – at your own pace.',
         btn: 'Discover Mat Pilates',
-      },
-      classTypes: {
-        kicker: 'For every level',
-        title: 'Find your class',
-        items: [
-          { icon: '○', title: 'Beginner', desc: 'Your gentle introduction to the world of Pilates.' },
-          { icon: '◐', title: 'Pre & Postnatal', desc: 'Safe training — before and after birth.' },
-          { icon: '●', title: 'Move & Grow', desc: 'Movement, fun and development for children.' },
-          { icon: '◑', title: 'Intermediate', desc: 'For those with Pilates experience.' },
-          { icon: '◉', title: 'Private', desc: 'Individual 1:1 training tailored to your goals.' },
-          { icon: '◒', title: 'Duo', desc: 'Train together and motivate each other.' },
-        ],
-      },
-      gruppen: {
-        kicker: 'Diversity & Focus',
-        title: 'Classes for Every Group',
-        sub: 'From women only sessions and athletic core training for men to 50+ joint vitality, mindful pre/postnatal care, and joyful movement for kids — we offer specialized formats for every life stage.',
-        tagTitle: 'Target Groups Overview',
-        more: 'View details',
-        cta: 'Inquire group',
       },
       preisePreview: {
         kicker: 'Invest in Yourself',

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
 import ScrollReveal from './components/ScrollReveal';
-import { classes, targetGroups, testimonials, studioInfo } from './data/content';
+import { classes, testimonials, studioInfo } from './data/content';
 import { useLanguage } from './context/LanguageContext';
 import { t } from './data/translations';
 
@@ -47,11 +47,6 @@ export default function HomePage() {
     { label: 'Reformer', href: '/kurse/reformer' },
     { label: 'Barre', href: '/kurse/barre' },
     { label: 'Mat', href: '/kurse/mat' },
-    { label: 'Women only', href: '#gruppen' },
-    { label: 'Men only', href: '#gruppen' },
-    { label: '50+', href: '#gruppen' },
-    { label: 'Pre- & Postnatal', href: '#gruppen' },
-    { label: 'Move & Grow', href: '#gruppen' },
     { label: 'Preise', href: '/preise' },
     { label: 'Curtiusstraße 9', href: '/kontakt' },
   ];
@@ -272,73 +267,6 @@ export default function HomePage() {
       </section>
 
 
-
-      {/* ═══════════ SECTION 8: TARGET GROUPS (UNIFIED) ═══════════ */}
-      <section className={styles.targetGroupsSection} id="gruppen" data-navbar-theme="cream">
-        <div className={styles.targetGroupsInner}>
-          <ScrollReveal>
-            <div className={styles.targetGroupsHeader}>
-              <span className="kicker">{tr.gruppen.kicker}</span>
-              <h2>{tr.gruppen.title}</h2>
-              <p>{tr.gruppen.sub}</p>
-            </div>
-          </ScrollReveal>
-
-          <div className={styles.targetGroupsGrid}>
-            {targetGroups.map((group, idx) => (
-              <ScrollReveal key={group.id} delay={idx * 0.1}>
-                <div className={styles.targetGroupCard} id={`group-card-${group.id}`}>
-                  <div className={styles.targetGroupCardImage}>
-                    <Image
-                      src={group.image}
-                      alt={group[lang].title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      style={{ 
-                        objectFit: 'cover',
-                        objectPosition: group.objectPosition || 'center center',
-                      }}
-                    />
-                    <div className={styles.targetGroupCardBadge}>
-                      {group[lang].badge}
-                    </div>
-                  </div>
-                  <div className={styles.targetGroupCardBody}>
-                    <h3>{group[lang].title}</h3>
-                    <p className={styles.targetGroupCardSub}>{group[lang].subtitle}</p>
-                    <p className={styles.targetGroupCardDesc}>{group[lang].desc}</p>
-                    
-                    <ul className={styles.targetGroupHighlights}>
-                      {group[lang].highlights.map((item, hIdx) => (
-                        <li key={hIdx}>{item}</li>
-                      ))}
-                    </ul>
-
-                    <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '0.65rem', paddingTop: '0.5rem' }}>
-                      <a
-                        href={studioInfo.bookingUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="btn btn--outline-dark"
-                        style={{ width: '100%', textAlign: 'center', fontSize: '0.75rem', padding: '0.6rem 0.5rem' }}
-                      >
-                        {tr.gruppen.cta}
-                      </a>
-                      <Link
-                        href="/kontakt"
-                        className="link-arrow"
-                        style={{ alignSelf: 'center', fontSize: '0.8rem' }}
-                      >
-                        {tr.gruppen.more}
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ═══════════ SECTION 11: GALLERY ═══════════ */}
       <section className={styles.gallery} id="gallery" data-navbar-theme="light">

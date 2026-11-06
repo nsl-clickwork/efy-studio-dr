@@ -49,7 +49,7 @@
 
 ## 4. CẤU TRÚC TRANG & THÔNG TIN DOANH NGHIỆP
 - Các trang chính trong hệ thống (app/):
-  + / : Trang chủ (Hero video/ảnh, Triết lý, Giới thiệu Reformer/Barre/Mat, Nhóm đối tượng, Gallery, Testimonials, Địa chỉ, CTA đặt lịch). KHÔNG hiển thị bảng giá trên trang chủ (khách yêu cầu) — giá chỉ nằm ở /preise.
+  + / : Trang chủ (Hero video/ảnh, Triết lý, Giới thiệu Reformer/Barre/Mat, Gallery, Testimonials, Địa chỉ, CTA đặt lịch). KHÔNG hiển thị bảng giá trên trang chủ (khách yêu cầu) — giá chỉ nằm ở /preise.
   + /kurse : CHỈ 3 lớp chính (Reformer, Barre, Mat) — khách yêu cầu bỏ phần nhóm đối tượng (Women/Men/50+/Move & Grow) khỏi trang này.
   + /kurse/[slug] : Chi tiết từng lớp — 45 phút, accordion các Format (Reformer: Essentials/Sculpt/Elevated/Solo/Duo/Prenatal/Postnatal; Barre: Essentials/Elevated; Mat: Essentials/Classical/Power/Prenatal/Postnatal). Barre & Mat: "In Studio + Online"; Pre/Postnatal Mat chỉ tại studio. Layout đã được khách duyệt.
   + /preise : 6 tab — Gruppe Reformer, Gruppe Matte & Barre, Solo, Duo, Neukund:innen, Online (12 €).
